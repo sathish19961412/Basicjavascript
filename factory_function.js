@@ -11,4 +11,4 @@ function CreatePerson(name){
 }
 
 let sathish=CreatePerson("sathish");
-sathish.greeting();
+    sathish.greeting();
