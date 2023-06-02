@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Javacsipt Apply method</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+       
+        <h2>Javacsipt Apply() method</h2> 
+        <p id="demo"></p>
+        <script>
+            const person = {
+              fullName: function(city, country) {
+                return this.firstName + " " + this.lastName + "," + city + "," + country;
+              }
+            }
+            
+            const person1 = {
+              firstName:"John",
+              lastName: "Doe"
+            }
+            
+            document.getElementById("demo").innerHTML = person.fullName.apply(person1, ["Oslo", "Norway"]); 
+        </script>
+    </body>
+</html></htl>

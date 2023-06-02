@@ -1,0 +1,73 @@
+.physicianList ul{
+    margin: 0;
+     padding: 0; 
+     list-style: none;
+    }
+.physicianList ul li{
+    display: inline-block; 
+    width: 240px; 
+    float: left; 
+    margin-right: 15px; 
+    margin-bottom: 15px;
+}
+.physicianBox{
+	border: 1px solid #ddd;
+	color: #333;
+	margin-bottom: 20px;
+	position: relative;
+	padding-bottom: 20px;
+	background-color: #f5f5f5;
+	
+}
+.physicianBox .physicianPic {
+	padding: 15px 0;
+	background-color: #fff;
+  text-align: center;
+}
+.physicianBox .physicianPic img{
+	border: 6px solid #f8f8f8;
+	-webkit-border-radius: 50%;
+    border-radius: 50%;
+    transition: all 0.3s ease 0s;
+    margin: 0 auto;
+    height: 120px;
+    width: 120px;
+}
+.physicianInfo{
+	padding: 10px;
+	text-align: center;
+	border-top: 1px solid #eee;
+}
+.physicianInfo h6{font-size: 16px; margin:0;}
+.physicianBox strong{color: #444;}
+.physicianBox p{font-size: 13px; margin: 0; line-height: 22px;}
+.physicianBio{position:absolute; right: 0; bottom: 3px;}
+.physicianModal{text-align: center;}
+.physicianModal .physicianPic img {
+    border: 6px solid #f8f8f8;
+	-webkit-border-radius: 50%;
+    border-radius: 50%;
+    transition: all 0.3s ease 0s;
+    margin: 0 auto;
+    height: 180px;
+    width: 180px;
+}
+.physicianModal .info p, .physicianModal .info .text-info{margin: 0;}
+.showBioBtn{background-color: #337ab7; padding: 5px 10px; color: #fff; font-size: 12px;}
+
+/*Pagination CSS*/
+#page_navigation {
+  clear:both;
+  margin: 20px 0;
+}
+#page_navigation a{
+	padding:3px 6px;
+	border:1px solid #2e6da4;
+	margin:2px;
+	color:black;
+	text-decoration:none
+}
+.active_page{
+	background:#337ab7;
+	color:white !important;
+}

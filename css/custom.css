@@ -1,0 +1,458 @@
+.footer {
+    text-align: center;
+    padding: 7.1em 0 5.5em;
+    font-size: 12px;
+    color: #aaa;
+    background-color: #696565;
+}
+
+.navbar-desctop {
+    display: none;
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 4vmin 0 1vmin;
+    background-color: #272727;
+}
+
+.responsive {
+    max-width: 90%;
+    height: auto;
+}
+
+.brand-panel {
+    position: absolute;
+    z-index: 4;
+    left: 0;
+    top: 0;
+    width: 39.47vmin;
+    height: 40.7vmin;
+    padding: 1.8vmin 2em 4.8vmin;
+    background-color: #2b2b2b;
+    text-align: center;
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.main-header {
+    position: relative;
+    z-index: 1;
+    color: #fff;
+    text-align: right;
+    padding-left: 38.5vmin;
+}
+
+.main-header h1 {
+    color: #fff;
+    margin: 0;
+    margin-right: -.32em;
+}
+
+.bg-about {
+    background: url(../img/bg/whoweare.jpg) 50% 0 no-repeat;
+    background-size: cover;
+}
+
+.main-inner {
+    position: relative;
+    z-index: 1;
+    min-height: 0;
+    padding: 33.7vmin 0;
+}
+
+.entry-title {
+    font-size: 3.6em;
+    margin: 0 0 1em;
+}
+
+.entry {
+    padding: 0px 7.5em;
+}
+
+.projects .project-details-item {
+    position: relative;
+}
+
+.project-details-title {
+    position: relative;
+    font-family: oswald, sans-serif;
+    font-weight: 400;
+    font-size: 1.9em;
+    line-height: 1.5;
+    text-transform: uppercase;
+    color: #fff;
+    margin: 0 0 .7em;
+}
+
+.project-details-descr {
+    font-size: 1.1em;
+    line-height: 1.62;
+}
+
+.project-details-info {
+    background-color: #c5a47e;
+    padding: 4.8em 3.1em;
+    color: #fff;
+    width: 44%;
+}
+
+.project-details-img {
+    position: relative;
+    padding: 0;
+}
+
+.entry-text {
+    font-size: 1.3em;
+    line-height: 1.6;
+}
+
+.col-about-info li {
+    list-style: disc;
+    padding-top: 8px !important;
+}
+
+.col-about-info ul {
+    padding-left: 20px;
+    font-size: 20px;
+    font-family: 'Work Sans', sans-serif;
+    letter-spacing: 1px;
+    font-weight: 500;
+}
+
+.footer {
+    margin: 0px;
+}
+
+.navbar-desctop-menu>li {
+    float: left;
+    margin-left: 4.2em;
+}
+
+.project figure {
+    position: relative;
+}
+
+.product-border-1 {
+    width: 92%;
+    height: 98%;
+    border: 2px #ef3d47 solid;
+    position: absolute;
+    z-index: 12;
+    margin-left: 4%;
+    margin-top: 2%;
+    display: none;
+}
+
+.product-border-2 {
+    width: 96%;
+    height: 96%;
+    border: 2px #48bfb1 solid;
+    margin-left: 2%;
+    margin-top: 4%;
+    position: absolute;
+    z-index: 12;
+    display: none;
+}
+
+div.owl-item:hover div.product-border-1 {
+    display: block;
+}
+
+div.owl-item:hover div.product-border-2 {
+    display: block;
+}
+
+.project figure img {
+    display: block;
+    width: 100%;
+    -webkit-transition: all 8s linear;
+    -o-transition: all 8s linear;
+    transition: all 8s linear;
+}
+
+.project figcaption {
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin: 3.2em 3.6em;
+}
+
+.project-title {
+    position: relative;
+    top: 0;
+    left: 0;
+    margin: 0;
+    font-family: 'Oswald', sans-serif;
+    font-weight: normal;
+    font-size: 1.56em;
+    line-height: 1.45;
+    letter-spacing: 0.07em;
+    color: #fff;
+    text-transform: uppercase;
+    -webkit-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+}
+
+.project-category {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    margin: 0 0 -0.8em;
+    font-family: 'Oswald', sans-serif;
+    font-weight: normal;
+    font-size: 14px;
+    color: #fff;
+    letter-spacing: 0.8em;
+    -webkit-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    -o-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+    -webkit-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+}
+
+.more-project {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 220px;
+    margin-left: -110px;
+    margin-top: -22.5px;
+    height: 45px;
+    padding: 15px;
+    line-height: 15px;
+    opacity: 0;
+}
+
+.btn {
+    font-family: 'Work Sans', sans-serif;
+    position: relative;
+    display: inline-block;
+    border: 0.2em solid #ef3d47;
+    border-radius: 30px;
+    padding: 1.1em 2.2em 1.05em;
+    font-size: 0.875em;
+    color: #fff;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    text-decoration: none;
+    background-color: #ef3d47;
+    /* border: 0; */
+    font-weight: 600;
+    -webkit-transition: all .3s ease-out !important;
+    transition: all .3s ease-out !important;
+}
+
+.project figcaption {
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin: 3.2em 3.6em;
+}
+
+.owl-carousel {
+    display: none;
+    position: relative;
+    width: 100%;
+    -ms-touch-action: pan-y;
+}
+
+.owl-carousel .owl-wrapper-outer {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+
+owl-carousel .owl-wrapper {
+    display: none;
+    position: relative;
+    -webkit-transform: translate3d(0px, 0px, 0px);
+}
+
+.owl-carousel .owl-item {
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+}
+
+.owl-carousel .owl-item {
+    float: left;
+}
+
+.project figure:hover .more-project {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+    transform: scale(1);
+}
+
+@media only screen and (max-width: 500px) {
+    .col-about-spec {
+        text-align: center;
+    }
+    .col-about-title {
+        text-align: center;
+    }
+    .col-about-img img {
+        box-shadow: 0 8px 25px rgba(0, 0, 0, .2);
+        display: none;
+    }
+    .entry {
+        padding: 0px 3.5em;
+    }
+    .project-details-info {
+        background-color: #c5a47e;
+        padding: 4.8em 3.1em;
+        color: #fff;
+        width: 100%;
+    }
+    .service-item {
+        text-align: center;
+    }
+    .service-item p {
+        text-align: left;
+    }
+    .brand-panel {
+        position: absolute;
+        z-index: 4;
+        left: 0;
+        top: 0;
+        width: 65.47vmin;
+        height: 12.7vmin;
+        padding: 1.8vmin 2em 4.8vmin;
+        background-color: #2b2b2b;
+        text-align: center;
+        -webkit-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        transition: all 0.3s;
+    }
+}
+
+@media only screen and (max-width: 1920px) {
+    .exhibit-content .exhibit-link {
+        margin-top: 455px;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    .exhibit-content .exhibit-link {
+        margin-top: 370px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    div#exhibit .exhibit-link {
+        margin-top: 15px;
+        text-align: center;
+    }
+    div#exhibit .exhibit-link a p {
+        font-size: 70%;
+    }
+}
+
+.more-project {
+    padding: 1em 1.1em 1.8em 1.1em;
+}
+
+.project {
+    cursor: pointer;
+}
+
+.footer {
+    text-align: center;
+    padding: 4.1em 0 2.5em;
+    font-size: 12px;
+    color: #d0d0d0;
+    background-color: #696565;
+}
+
+.page-lines {
+    display: none;
+}
+
+.crhead {
+    position: absolute;
+    z-index: 0;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin: 2.2em 2.2em;
+    font-family: 'Oswald', sans-serif;
+    font-weight: normal;
+    font-size: 1.56em;
+    line-height: 1.45;
+    letter-spacing: 0.07em;
+    color: #fff;
+    text-transform: uppercase;
+    -webkit-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+}
+
+.crcont {
+    overflow: hidden;
+    padding-left: 40px;
+    padding-right: 0px;
+    text-align: justify;
+    max-width: 90%;
+}
+
+.brand-panel {
+    position: absolute;
+    z-index: 4;
+    left: 0;
+    top: 0;
+    width: 44.47vmin;
+    height: 33.7vmin;
+    padding: 1.8vmin 2em 4.8vmin;
+    background-color: #2b2b2b;
+    text-align: center;
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.section {
+    position: relative;
+    margin-top: 2.1em;
+}
+
+.section-content {
+    margin-top: 4.1em;
+}
+
+lcraft {
+    position: relative;
+    margin: 10px auto;
+    width: 347px;
+    height: 658px;
+    z-index: 1;
+}
+
+.contact-info-content {
+    padding: 5.5em 5.6em;
+    background-color: rgba(27, 26, 25, 0.95);
+    margin-top: 42px;
+}
+
+.mpad {
+    padding-left: 10px;
+}

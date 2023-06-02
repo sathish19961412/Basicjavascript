@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Datattpes of Javascript</title>
+        
+    </head>
+    <body>
+        <!--
+            JavaScript has 8 Datatypes
+            1. String
+            2. Number
+            3. Bigint
+            4. Boolean
+            5. Undefined
+            6. Null
+            7. Symbol
+            8. Object
+        -->
+    <h2>Javascript Datatypes</h2>
+    <p id="demo"></p>
+    <!--BigInt-->
+    <p id="Bigint"></p>
+    <!--Js Array-->
+    <p id="array"></p>
+    <!--Js Array-->
+    <p id="object"></p>
+    <script>
+        let x=16+"Volvo";
+        let y="volvo"+16;
+        let z=5;
+           z="sathish";
+        document.getElementById('demo').innerHTML=x;
+    </script>
+
+    <script>
+        let  a=BigInt("1234567891488888884444444")
+        document.getElementById('Bigint').innerHTML=a;
+    </script>
+
+    <script>
+        const cars=['Saab','volvo','BMW']
+        document.getElementById('array').innerHTML=cars[2];
+    </script>
+    <script>
+        const person={
+            firstname:"sathish",
+            lastname:"mathew",
+            age:26
+        };
+        document.getElementById('object').innerHTML=person.firstname + ","+person.lastname;
+    </script>
+
+
+    </body>
+</html>

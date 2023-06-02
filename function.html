@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Datattpes of Javascript</title>
+        
+    </head>
+    <body>
+        <!--Javascript Funbction-->
+        <h2>Javascript Function</h2>
+        <h5>Javascript Paramerters</h5>
+        <p id="demo"></p>
+        <!--Function Expression-->
+        <p id="demo1"></p>
+        <!--Function Constructor-->
+        <p id=demo2></p>
+        <!--Invoked Self Function-->
+        <p id=demo3></p>
+         <!--Arrow Function-->
+         <p id=demo4></p>
+        <script>
+            //a,b are Parametres
+            function multiple(a,b){
+                return a*b;
+            }
+
+            let x=multiple(3,8);
+            document.getElementById('demo').innerHTML=x;
+        </script>
+
+         <script>
+            //Function Expression
+            const y=function multiple(a,b){
+                return a*b;
+            }
+            let z=multiple(4,5);
+            document.getElementById('demo1').innerHTML=z;
+        </script>
+
+        <script>
+            //Function Constructor
+            const y1=function multiple(a1,b1){return a1*b1;}
+            let z1=multiple(4,5);
+            document.getElementById('demo2').innerHTML=z1;
+        </script>
+
+        <script>
+            (function(){
+             let x1="Hello,Welcome To Sathish";
+             document.getElementById('demo3').innerHTML=x1;
+            })();
+        </script>
+
+        <script>
+            const x2=(y,z)=>y*z;
+            document.getElementById('demo4').innerHTML=x2(12,14);
+        </script>
+
+    </body>
+</html>

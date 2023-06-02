@@ -1,0 +1,262 @@
+@media only screen and (max-width:1920px)
+{
+
+}
+
+@media only screen and (max-width:1400px)
+{
+
+}
+@media only screen and (max-width:1199px)
+{
+    .img-fluid-14 {
+        width: 23% !important;
+        height: auto;
+    }
+}
+@media only screen and (max-width:991px)
+{
+    .navbar-toggler:not(:disabled):not(.disabled) {
+        cursor: pointer;
+        position: relative;
+        right: 11px;
+        top: 15px;
+        background: #e1c67e;
+    }
+    #refer {
+        position: absolute;
+        left: 6% !important;
+        top: 69px !important;
+    }
+}
+@media only screen and (max-width:767px)
+{
+    #header-10 
+    {
+        position: relative;
+        left:0px !important;
+    }
+    .img-fluid-1
+    {
+        max-width:100% !important;
+        height: auto !important;
+    }
+    #contact-hide{
+        display: none;
+    }
+    .banner--0 
+    {
+        height: 18vh !important;
+    }
+    .padd-1 {
+        padding-top:8px !important;
+    }
+    #logo-fontfamilly 
+    {
+        font-family: 'Bebas Neue', cursive;
+        position: relative;
+        top: 20px;
+        right: 55px;
+    }
+    #main_navbar {
+        margin-top: -14px !important;
+    }
+    .navbar-toggler:not(:disabled):not(.disabled) {
+        cursor: pointer;
+        position: relative;
+        left: 256px;
+        top: 7px;
+        background: #e1c67e;
+    }
+    .navbar-light .navbar-toggler
+    {
+        color: rgba(0,0,0,.5);
+        border-color: rgba(0,0,0,.1);
+        position: absolute;
+        left: 285px;
+        top: 67px;
+    }
+    #talent-1 
+    {
+        font-size: 14px !important;
+        line-height: 24px !important;
+    }
+    .button--1
+    {
+        width:100% !important;
+    }
+    .button--1:hover
+    {
+        width:100% !important;
+    }
+    h1 
+    {
+        font-size: 1.5em !important;
+    }
+    .card 
+    {
+        box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%);
+        padding: 5px;
+        text-align: center;
+        background-color: #fff;
+        border-radius: 10px;
+        cursor: pointer;
+        margin-bottom: 8%;
+    }
+    p
+    {
+        font-size: 14px !important;
+    }
+    h6
+    {
+        font-size: 14px !important;
+        padding-bottom: 3%;    
+    }
+    #img-4 
+    {
+        margin-bottom: 3%;
+    }
+    .tech
+    {
+        position: absolute;
+        bottom: 15px !important;
+        left: 174px !important;
+        width: 126px !important;
+        background: #ff5b00b8;
+        padding-top: 6px !important;
+        padding-bottom: 2px !important;
+        color: white;
+        border-left-style: double;
+        border-right-style: double;
+        border-bottom-right-radius:0px !important;
+        border-bottom-left-radius: 0px !important;
+    }
+    #ad {
+        background:none !important;
+        border-bottom-left-radius: 175px;
+        border-bottom-right-radius: 175px;
+    }
+    #logo-footer 
+    {
+        max-width: 270px;
+        height: auto;
+        margin-top: 2%;
+    }
+    #footer-1
+    {
+        position: relative;
+        left: 13px;
+        top: 20px;
+    }
+    #footer-2
+    {
+        position: relative;
+        left: -25px;
+        top: 34px;
+    }
+    #footer-3
+    {
+        position: relative;
+        left: -29px;
+        top: 46px;
+        padding-bottom: 27px;
+    }
+    address {
+        margin-bottom: 0rem !important;
+        font-style: normal;
+        line-height: inherit;
+        margin-left: 18px;
+    }
+    #header-menu2
+    {
+        padding-top:0px;
+    }
+    #artist {
+        background: url(assets/banner/tech.gif);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 18vh !important;
+    }
+    .appointment
+    {
+        background: #ff5b00;
+        text-align: center;
+        padding-top: 20px;
+        padding-bottom: 5px;
+        position: relative;
+        top: 38px;
+        margin-bottom: 13%;
+    }
+    #icon-size1 
+    {
+        font-size: 35px;
+        position: absolute;
+        left: 25px;
+        top: 141px !important;
+        color: #ffffff;
+    }
+}
+@media only screen and (min-width:320px) and (max-width:480px){
+    #logo-fontfamilly1 {
+        max-width: 224px !important;
+        height: auto;
+        position: relative;
+        top: 2px !important;
+        left: -4px !important;
+    }
+    h3 {
+        font-size: 1.25rem !important;
+      }
+      #footer-2 {
+        position: relative;
+        left: 14px;
+        top: 34px;
+    }
+    #footer-1 {
+        position: relative;
+        left: -12px;
+        top: 13px;
+    }
+    .line-1 {
+        background: #ff5b00;
+        width: 163px;
+        height: 3px;
+        text-align: center;
+        display: flex;
+        position: relative;
+        left: 24% !important;
+    }
+    #logo-fontfamilly {
+        max-width: 100% !important;
+        height: auto;
+        top: 45px !important;
+    }
+    #services {
+        margin-top: 60px;
+        background-color: #151515;
+        background-image: url(assets/img/ppstern2.jpg);
+        background-repeat: repeat;
+        padding:0px !important;
+    }
+    #free-link {
+        font-size: 11px !important;
+        width: 101px !important;
+        position: relative;
+        left: 33px !important;
+    }
+    #free-link1 {
+        font-size: 11px !important;
+        width: 112px !important;
+    }
+    .navbar-toggler:not(:disabled):not(.disabled) {
+        cursor: pointer;
+        position: relative;
+        left: 239px;
+        top: 7px;
+        background: #e1c67e;
+        font-size: 10px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+}

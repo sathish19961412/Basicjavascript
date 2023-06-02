@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Function of Javascript</title>
+        
+    </head>
+    <body>
+        <!--Javascript Funbction-->
+     
+        <h1>Function are Method</h1>
+        <p id="demo"></p>
+        <h1>Function are Method in call() method</h1>
+        <p id="demo1"></p>
+        <h1>Function  call() method with arguments</h1>
+        <p id="demo2"></p>
+        <!--Function Parameter-->
+        <script>
+           const person={
+              firstname:"sathish",
+              lastname:"mathew",
+              fullname:function(){
+                return this.firstname+" "+this.lastname;
+              }
+           }
+           document.getElementById("demo").innerHTML=person.fullname();
+        </script>
+        <script>
+            const person1={
+                  fullname1:function(){
+                    return this.firstname1+ " "+this.lastname1;
+                  }
+            }
+
+            const person2={
+                firstname1:"sathish",
+                lastname1:"mathew"
+            }
+
+            const person3={
+                firstname1:"sathish1",
+                lastname1:"mathew1"
+            }
+            document.getElementById("demo1").innerHTML=person1.fullname1.call(person3);
+        </script>
+            <script>
+                const person6 = {
+                    fullName2: function(city, country) {
+                        return this.firstName4 + " " + this.lastName4 + "," + city + "," + country;
+                    }
+                }
+
+                const person4= {
+                    firstName4:"John",
+                    lastName4: "Doe"
+                }
+
+                const person5= {
+                    firstName5:"Mary",
+                    lastName5: "Doe"
+                }
+
+                document.getElementById("demo2").innerHTML = person6.fullName2.call(person4, "Oslo", "Norway"); 
+            </script>
+
+    </body>
+</html>

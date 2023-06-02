@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Function of Javascript</title>
+        
+    </head>
+    <body>
+        <!--Javascript Funbction-->
+     
+        <h1>Function InVocation</h1>
+        <p id="demo"></p>
+        <h1>this Keyword </h1>
+        <p id="demo1"></p>
+        <h1>Object Datatypes</h1>
+        <p id="demo2"></p>
+        <h1>Function Constructor & Create a New Object</h1>
+        <p id="demo3"></p>
+        <!--Function Parameter-->
+        <script>
+           function myfunction(a,b){
+                return a*b;
+           }
+            document.getElementById('demo').innerHTML=myfunction(10,40);
+        </script>
+        <script>
+            let x=myfunction();
+            function myfunction(a,b){
+                 return this;
+            }
+             document.getElementById('demo1').innerHTML=x;
+        </script>
+         <script>
+           const myObject = {
+                firstName:"John",
+                lastName: "Doe",
+                fullName: function () {
+                    return this.firstName + " " + this.lastName;
+                }
+            }
+             document.getElementById('demo2').innerHTML=myObject.fullName();
+        </script>
+        <script>
+            function myfunctions(arg1,arg2){
+                this.firstname=arg1;
+                this.lastname=arg2;
+            }
+
+            //Create Object
+            const myObject1=new myfunction("sathish","mathew");
+            document.getElementBYId('demo3').innerHTML=myObject1.firstname;
+        </script>
+    </body>
+</html>

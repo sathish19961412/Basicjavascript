@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Javascript Class</title>
+    </head>
+    <body>
+            <h1>Javascript Classes</h1>
+            <h2>Javascript Static Method</h2>
+            <p id="demo"></p>
+            <p id="demo1"></p>
+            <script>
+                class Car {
+                constructor(name) {
+                    this.name = name;
+                }
+                static hello() {
+                    return "Hello!!";
+                }
+                }
+            
+              const myCar = new Car("Ford");
+
+              document.getElementById("demo").innerHTML = Car.hello();
+            </script>
+            
+            <script>
+                class Cars {
+                constructor(name) {
+                    this.name = name;
+                }
+                static hello(x) {
+                    return "Hello " + x.name;
+                }
+                }
+                
+                const myCars = new Cars("Ford");
+                document.getElementById("demo1").innerHTML = Cars.hello(myCar);
+            </script>
+                        
+    </body>
+</html>

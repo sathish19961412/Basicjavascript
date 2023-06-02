@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Javascript Class</title>
+    </head>
+    <body>
+        <h1>Javascript Classes</h1>
+        <h2>Class Inneritance</h2>
+        <p id="demo"></p>
+        <h2>Class Inneritance Getters and Setters</h2>
+        <p id="demo1"></p>
+        <script>
+           class Car{
+               constructor(brand){
+                   this.carname=brand;
+               }
+               present(){
+                  return 'I have a'+this.carname;
+               }
+           }
+
+           class Model extends Car{
+              constructor(brand,mod){
+                super(brand);
+                this.model=mod;
+              }
+              show(){
+                return this.present()+' It is a '+this.model;
+              }
+           }
+
+           const Mycar=new Model('Ford','Mustang');
+           document.getElementById('demo').innerHTML=Mycar.show();
+        </script> 
+        
+        <script>
+            class Cars{
+                constructor(brand){
+                    this.carname=brand;
+                }
+                get cname(){
+                    return this.carname;
+                }
+                set cname(x){
+                    this.carname=x;
+                }
+            }
+
+            const Mycar1=new Cars('Ford');
+            document.getElementById('demo1').innerHTML=Mycar1.cname;
+        </script>
+
+    </body>
+</html>
