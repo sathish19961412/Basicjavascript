@@ -3,11 +3,78 @@
 <body>
 
 <h2>JavaScript Objects</h2>
-<p>Acessing Project Property</p>
+<h4>Acessing Project Property1</h4>
 <p id="demo"></p>
 
+<h4>Acessing Project Property2</h4>
+<p id="demo1"></p>
+
+<h4>JavaScript for...in Loop</h4>
+<p id="demo2"></p>
+
+<h4>Nested Objects</h4>
+<p id="demo3"></p>
 
 <script>
+
+    const person={
+        firstname:"sathish",
+        lastname:"Doe",
+        age:26
+    };
+    document.getElementById('demo').innerHTML=person.firstname+" is " + person.age + " years old ";
+
+</script>
+
+<script>
+
+    const person1={
+        firstname1:"guru",
+        lastname1:"prasath",
+        age1:24
+    };
+    document.getElementById('demo1').innerHTML=person1['firstname1']+" is " + person1['age1'] + " years old ";
+
+</script>
+
+<script>
+
+const person2 = {
+  fname2:"mathew",
+  lname2:"sathish",
+  age2:25
+}; 
+
+person2.nationality="English";
+
+delete person2.nationality;
+
+let txt = "";
+
+for (let x in person2) {
+
+  txt += person2[x] + " ";
+
+}
+
+document.getElementById("demo2").innerHTML = txt;
+
+</script>
+
+<script>
+
+const myObj = {
+
+  name: "John",
+  age: 30,
+  cars: {
+    car1: "Ford",
+    car2: "BMW",
+    car3: "Fiat",
+  }
+}
+document.getElementById("demo3").innerHTML = myObj["cars"]["car2"];
+
 </script>
 
 </body>
