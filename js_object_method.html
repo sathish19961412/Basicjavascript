@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Objects</h2>
+<h4>JavaScript Object Methods</h4>
+<p id="demo"></p>
+
+<h4>Accessing Object Methods</h4>
+<p id="demo1"></p>
+
+<script>
+    const person={
+        firstname:"sathish",
+        lastname:"mathew",
+        age:26,
+        id:14121996,
+        fullName:function(){
+            return person.id + " " + person.firstname +" "+person.lastname;
+        }
+    }
+    // Display data from the object:
+   document.getElementById("demo").innerHTML = person.fullName();
+</script>
+
+
+</body>
+</html>
