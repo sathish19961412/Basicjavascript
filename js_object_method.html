@@ -9,6 +9,9 @@
 <h4>Accessing Object Methods</h4>
 <p id="demo1"></p>
 
+
+<h4>Adding a Method to an Object/h4>
+<p id="demo2"></p>
 <script>
     const person={
         firstname:"sathish",
@@ -22,7 +25,32 @@
     // Display data from the object:
    document.getElementById("demo").innerHTML = person.fullName();
 </script>
+<script>
+    const person1={
+        firstname1:"guru",
+        lastname1:"prasath",
+        age1:24,
+        id:19961214,
+        userdetails:function(){
+            return person1.firstname1 +" "+ person1.lastname1 + " "+person1.age1;
+        }
+    }
 
+    //Display data from the objects
+    document.getElementById("demo1").innerHTML=person1.userdetails();
+</script>
+<script>
+   const person3 = {
+  firstName3: "John",
+  lastName3: "Doe",
+  id3: 5566,
+};
+person3.name = function() {
+  return this.firstName3 + " " + this.lastName3;
+};
 
+document.getElementById("demo2").innerHTML =
+"My father is " + person3.name(); 
+</script>
 </body>
 </html>
