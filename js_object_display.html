@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+    <head>javascript Object Display</head>
+<body>
+
+<h2>JavaScript Objects</h2>
+
+<h4>JavaScript Object Methods</h4>
+<p id="demo"></p>
+
+<h4>Object can be displayed as a string</h4>
+<p id="demo1"></p>
+
+<h4>Displaying the Object in a Loop</h4>
+<p id="demo2"></p>
+
+<h4>Displaying the Object in a Loop</h4>
+<p id="demo3"></p>
+
+<h4>Displaying the Object Using JSON.stringify()</h4>
+<p id="demo4"></p>
+
+
+<script>
+    const Person={
+        firsname:"sathish",
+        lastname:"mathew",
+        age:26
+    };
+
+    document.getElementById('demo').innerHTML=Person;
+</script>
+<script>
+    const Person1={
+        firstname1:"mathew",
+        lastname1:"sathish",
+        age1:27,
+        city:"New York"
+
+    };
+    document.getElementById('demo1').innerHTML=Person1.firstname1 +" "+Person1.lastname1 +" "+Person1.age1 +" "+Person1.city;
+</script>
+<script>
+    const Person2={
+        firstname2:"mathew",
+        lastname2:"sathish",
+        age2:27,
+        city1:"New York"
+
+    };
+
+    let txt='';
+    for(let x in Person1){
+        txt+=Person1[x]+ "-";
+    }
+    document.getElementById('demo2').innerHTML=txt;
+</script>
+<script>
+    const Person3={
+        firstname3:"mathew",
+        lastname3:"sathish",
+        age3:27,
+        city2:"New York"
+
+    };
+
+    const myarry=Object.values(Person2)
+    document.getElementById('demo3').innerHTML=myarry;
+</script>
+<script>
+    const Person4={
+        firstname4:"mathew",
+        lastname4:"sathish",
+        age4:27,
+        city4:"New York",
+        today:new Date()
+
+    };
+
+    let mystring=JSON.stringify(Person4)
+    document.getElementById('demo4').innerHTML=mystring;
+</script>
+</body>
+</html>
