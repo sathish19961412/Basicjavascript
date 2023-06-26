@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+        <title>JavaScript Object Accessors</title>
+    </head>
+    <body>
+     <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div>
+                        <h2>JavaScript Getter (The get Keyword)</h2>
+                        <p id="demo"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+     </section>
+     <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div>
+                        <h2>JavaScript Setter (The set Keyword)</h2>
+                        <p id="demo1"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+     </section>
+     <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div>
+                        <h2>JavaScript Function or Getter?</h2>
+                        <p id="demo2"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+     </section>
+     <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div>
+                        <h2>JavaScript Function or Getter?</h2>
+                        <p id="demo3"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+     </section>
+     <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div>
+                        <h2>Why Using Getters and Setters?(Object.defineProperty())</h2>
+                        <p id="demo4"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+     </section>
+     <script>
+        const person={
+            firstname:"sathish",
+            lastname:"mathew",
+            language:"en",
+            get lang(){
+                return this.language
+            }
+
+        };
+
+        document.getElementById('demo').innerHTML=person.lang;
+     </script>
+     <script>
+          const person1={
+            firstname:"sathish",
+            lastname:"mathew",
+            language:"",
+            set lang(lang){
+                this.language=lang;
+            }
+
+        };
+
+        person1.lang="en";
+
+        document.getElementById('demo1').innerHTML=person1.language ;
+     </script>
+     <script>
+        const person2={
+            firstname:"sathish",
+            lastname:"mathew",
+            fullname:function(){
+                return this.firstname+" "+this.lastname;
+            }
+        };
+        document.getElementById('demo2').innerHTML=person2.fullname();
+     </script>
+      <script>
+        const person3={
+            firstname1:"sathish",
+            lastname1:"mathew",
+            get fullname(){
+                return this.firstname1+" "+this.lastname1;
+            }
+        };
+        document.getElementById('demo3').innerHTML=person3.fullname;
+     </script>
+      <script>
+        //Define an Object
+        const obj={counter:0};
+
+        // Define Setters and Getters
+        Object.defineProperty(obj, "reset", {
+            get : function () {this.counter = 0;}
+        });
+        Object.defineProperty(obj, "increment", {
+            get : function () {this.counter++;}
+        });
+        Object.defineProperty(obj, "decrement", {
+            get : function () {this.counter--;}
+        });
+        Object.defineProperty(obj, "add", {
+            set : function (value) {this.counter += value;}
+        });
+        Object.defineProperty(obj, "subtract", {
+            set : function (value) {this.counter -= value;}
+        });
+
+        // Play with counter:
+        obj.reset;
+        obj.add =5;
+        obj.subtract = 1;
+        obj.increment;
+        obj.decrement;
+        document.getElementById("demo4").innerHTML = obj.counter;
+    </script>
+    </body>
+</html>
