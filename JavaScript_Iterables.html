@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width;initial-scale=1;shrink-to-fit=no" />
+    </head>
+    <body>
+        <section>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div>
+                            <h2>JavaScript Iterables</h2>
+                            <p>Iterate over a String:</p>
+                            <p id="demo"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+         </section>
+         <section>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div>
+                            <h2>JavaScript Iterables</h2>
+                            <p>Iterate over a Array:</p>
+                            <p id="demo1"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+         </section>
+         <section>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div>
+                            <h2>JavaScript Iterables</h2>
+                            <p>Home Made Iterable</p>
+                            <p id="demo2"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+         </section>
+         <script>
+            //Create a String
+            const name="sathish";
+
+            //List all elements
+            let text=""
+
+            for (const x of name){
+                text+=x+"<br>";
+            }
+            document.getElementById('demo').innerHTML=text;
+         </script>
+         <script>
+            //Create a Array
+            const item=['a','b','c'];
+
+            //List all elements
+            let text1=""
+            for (const x of item){
+                text1+=x+"<br>";
+            }
+            document.getElementById('demo1').innerHTML=text1;
+         </script>
+         <script>
+            // Home Made Iterable
+            function myNumbers() {
+              let n = 0;
+              return {
+                next: function() {
+                  n += 10;
+                  return {value:n, done:false};
+                }
+              };
+            }
+            
+            // Create Iterable
+            const n = myNumbers();
+            n.next(); // 10
+            n.next(); // 20
+            n.next(); // 30
+            
+            document.getElementById("demo2").innerHTML = n.next().value;
+        </script>
+    </body>
+</html>
