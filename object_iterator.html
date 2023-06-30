@@ -15,6 +15,12 @@
                             <p id="demo"></p>
                         </div>
                     </div>
+                    <div class="col-md-12">
+                        <div>
+                            <h2>Home Made Iterable:</h2>
+                            <p id="demo1"></p>
+                        </div>
+                    </div>
                 </div>
             </div>
          </section>
@@ -28,5 +34,25 @@
             }
             document.getElementById('demo').innerHTML=text;
          </script>
+         <script>
+            // Home Made Iterable
+            function myNumbers() {
+                let n = 0;
+                return {
+                    next: function() {
+                    n += 10;
+                    return {value:n, done:false};
+                    }
+                };
+            }
+                
+                // Create Iterable
+                const n = myNumbers();
+                n.next(); // 10
+                n.next(); // 20
+                n.next(); // 30
+            
+                document.getElementById("demo1").innerHTML = n.next().value;
+            </script>
     </body>
 </html>
