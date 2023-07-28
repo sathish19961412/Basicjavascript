@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Javascript Function Sequence</title>
+    </head>
+    <body>
+        <h1>Javascript Function Sequence</h1>
+        <p id="demo"></p>
+        <h1>Javascript Function Sequence Control</h1>
+        <p id="demo1"></p>
+        <h1>Javascript Function CallBack Function</h1>
+        <p id="demo2"></p>
+        <script>
+            function Display(some){
+                document.getElementById('demo').innerHTML=some;
+            }
+
+            function myFirst(){
+                Display('Bad');
+            }
+
+            function mysecond(){
+                Display('Good');
+            }
+            function Time(){
+                Display('Start Good Time');
+            }
+            myFirst();
+            mysecond();
+            Time();
+        </script>
+         <script>
+            function Display1(some){
+                document.getElementById('demo1').innerHTML=some;
+            }
+
+            function Calculater(num1,num2){
+                let sum=num1+num2;
+                return sum;
+            }
+
+            let result=Calculater(5,8);
+            Display1(result)
+        </script>
+            <script>
+                function Display2(some){
+                    document.getElementById('demo2').innerHTML=some;
+                }
+                
+                function MyCalculator(num1,num2,myCallback){
+                    let sum=num1+num2;
+                    myCallback(sum);
+                }
+                MyCalculator(8,12,Display2);
+            </script>
+    </body>
+</html>
