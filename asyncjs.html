@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <h1>JavaScript Functions</h1>
+        <h2>Callback Functions</h2>
+
+        <p>The result of the calculation is:</p>
+        <p id="demo"></p>
+
+        <h1>JavaScript Functions</h1>
+        <h2>setTimeout() with a Callback</h2>
+        
+        <p>Wait 3 seconds (3000 milliseconds) for this page to change.</p>
+        
+        <h1 id="demo1"></h1>
+        
+        <script>
+            function myDisplayer(something) {
+                document.getElementById("demo").innerHTML = something;
+            }
+
+            function myCalculator(num1, num2, myCallback) {
+                let sum = num1 + num2;
+                myCallback(sum);
+            }
+
+            myCalculator(5, 5, myDisplayer);
+        </script>
+        <script>
+            setTimeout(myFunction,3000);
+
+            function myFunction() {
+                document.getElementById("demo1").innerHTML = "I love You !!";
+            }
+        </script>
+    </body>
+</html>
