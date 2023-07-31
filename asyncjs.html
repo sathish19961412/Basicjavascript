@@ -17,7 +17,7 @@
         <p>Wait 3 seconds (3000 milliseconds) for this page to change.</p>
         
         <h1 id="demo1"></h1>
-        
+        <h1 id="demo2"></h1>
         <script>
             function myDisplayer(something) {
                 document.getElementById("demo").innerHTML = something;
@@ -35,6 +35,14 @@
 
             function myFunction() {
                 document.getElementById("demo1").innerHTML = "I love You !!";
+            }
+        </script>
+        <script>
+            setInterval(myfun,1000);
+
+            function myfun(){
+                let d=new Date();
+                document.getElementById('demo2').innerHTML=d.getHours()+':'+d.getMinutes()+':'+d.getSeconds();
             }
         </script>
     </body>
