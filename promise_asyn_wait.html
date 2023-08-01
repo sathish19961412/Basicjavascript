@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no"/>
+        <title>Javascript Promise Method</title>
+    </head>
+    <body>
+        <h2>JavaScript Promise</h2>
+        <p id="demo"></p>
+        <h2>JavaScript Async</h2>
+        <p id="demo1"></p>
+        <h2>JavaScript Async/wait</h2>
+        <h1 id="demo2"></h1>
+        <script>
+            function myDisplayer(some) {
+              document.getElementById("demo").innerHTML = some;
+            }
+            
+            let myPromise = new Promise(function(myResolve, myReject) {
+              let x = 0;
+            
+            // some code (try to change x to 5)
+            
+              if (x == 0) {
+                myResolve("OK");
+              } else {
+                myReject("Error");
+              }
+            });
+            
+            myPromise.then(
+              function(value) {myDisplayer(value);},
+              function(error) {myDisplayer(error);}
+            );
+          </script>
+          <script>
+            function myDisplayer(some) 
+            {
+                document.getElementById("demo1").innerHTML = some;
+            }
+
+            async function myFunction() 
+            {
+              return "Hello";
+            }
+
+            myFunction().then(
+                function(value) {
+                  myDisplayer(value);
+                },
+                function(error) {
+                  myDisplayer(error);
+                }
+            );
+
+          </script>
+          <script>
+              async function myDisplay() {
+                let myPromise = new Promise(function(resolve) {
+                  setTimeout(function() {
+                    resolve("I love You !!");
+                  }, 3000);
+                });
+                document.getElementById("demo2").innerHTML = await myPromise;
+              }
+
+              myDisplay();
+          </script>
+    </body>
+</html>
