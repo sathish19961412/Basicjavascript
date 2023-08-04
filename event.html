@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Js Event</title>
+</head>
+<body>
+    <h3>Element To The internal</h3>
+    <button onclick="document.getElementById('demo').innerHTML=Date()">The Time is?</button>
+    <p id="demo"></p>
+    <h3>Element To The inline</h3>
+    <button onclick="this.innerHTML=Date()">The Time is?</button>
+    <h3>Element To The External</h3>
+    <p id="demo1"></p>
+    <button onclick="myfunction()">The Time is?</button>
+    <script>
+        function myfunction(){
+            document.getElementById('demo1').innerHTML=Date();
+        }
+    </script>
+</body>
