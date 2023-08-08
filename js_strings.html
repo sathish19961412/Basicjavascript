@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no"/>
+        <title>Javascript Promise Method</title>
+    </head>
+    <body>
+
+        <h2>JavaScript Single Quotes & Double Quotes</h2>
+        <p id="demo"></p>
+        <h2>JavaScript String Length </h2>
+        <p id="demo1"></p>
+        <h2>JavaScript Escape Character </h2>
+        <p id="demo2"></p>
+        <h2>Breaking Long Code Lines</h2>
+        <p id="demo3"></p>
+        <h2>JavaScript Strings as Objects</h2>
+        <p id="demo4"></p>
+        <script>
+            let carName1='Volvo XC60'; //single Quotes
+            let carName2="Volvo XC60"; //Double Quotes
+            document.getElementById('demo').innerHTML=carName1 +" "+carName2;
+        </script>
+
+        <script>
+            let text="ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+            document.getElementById('demo1').innerHTML=text.length;
+        </script>
+
+         <script>
+            let text1="We are \'emotional\' to connect with the people";
+            document.getElementById('demo2').innerHTML=text1;
+        </script>
+        
+        <script>
+            document.getElementById('demo3').innerHTML=
+            "We are emotional  to connect with the people";
+        </script>
+        <script>
+            let username="sathish";
+            let username1=new String("sathish");
+            document.getElementById('demo4').innerHTML=typeof username + " " +typeof username1;
+        </script>
+    </body>
+</html>
