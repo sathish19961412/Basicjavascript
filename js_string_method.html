@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no"/>
+        <title>Javascript String Method</title>
+    </head>
+    <body>
+          <!--
+           1.Converting to Upper and Lower Case,String concat()
+           2.JavaScript String trim()
+           3.JavaScript String trimStart(),JavaScript String trimEnd()
+           4.JavaScript String Padding,JavaScript String padStart(),JavaScript String padEnd()
+           5.Extracting String Characters
+             There are 3 methods for extracting string characters:
+
+                charAt(position)
+                charCodeAt(position)
+                Property access [ ]
+            -->
+         <h2>JavaScript String Length</h2> 
+         <p id="demo"></p>
+         <h2>Extracting String Parts</h2>
+         <p id="demo1"></p>
+         <h2>Extracting String Parts negative</h2>
+         <p id="demo2"></p>
+         <h2>JavaScript String substring()</h2>
+         <p id="demo3"></p>
+         <h2>JavaScript String substr()</h2>
+         <p id="demo4"></p>
+         <h2>Replacing String Content</h2>
+         <p id="demo5"></p>
+         <h2>Regular expression with an /i flag (insensitive)</h2>
+         <p id="demo6">Please visit Microsoft!</p>
+         <button onclick="Case()">Change</button>
+         <script>
+             let text="ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+             let length=text.length;
+             document.getElementById('demo').innerHTML=length;
+         </script>
+          <script>
+            let text1 = "Apple, Banana, Kiwi";
+            let part=text1.slice(7,13);
+            document.getElementById('demo1').innerHTML=part;
+        </script>
+        <script>
+            let text2 = "Apple, Banana, Kiwi";
+            let part2=text2.slice(-12);
+            document.getElementById('demo2').innerHTML=part2;
+        </script>
+        <script>
+            let text3 = "Apple, Banana, Kiwi";
+            let part3=text3.substring(7,13);
+            document.getElementById('demo3').innerHTML=part3;
+        </script>
+        <script>
+            let text4 = "Apple, Banana, Kiwi";
+            let part4=text4.substr(9);
+            document.getElementById('demo4').innerHTML=part4;
+        </script>
+         <script>
+            let text5 = "Welcome Back To Sathish and Sathish"
+            let part5=text5.replace('Sathish','Mathew');
+            document.getElementById('demo5').innerHTML=part5;
+        </script>
+         <script>
+            function Case(){
+                let text = document.getElementById("demo6").innerHTML; 
+                document.getElementById("demo6").innerHTML =text.replace(/MICROSOFT/i,"W3Schools");
+            }
+        </script>
+      
+    </body>
+</html>
