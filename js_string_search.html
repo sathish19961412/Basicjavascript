@@ -10,10 +10,16 @@
          <h2>JavaScript String indexOf()</h2> 
          <p id="demo"></p>
         
-         <h2>JavaScript String indexOf()</h2> 
+         <h2>JavaScript String lastIndexOf()</h2> 
          <p id="demo1"></p>
          <h2>JavaScript String Search()</h2> 
          <p id="demo2"></p>
+         <h2>JavaScript String match()</h2> 
+         <p id="demo3"></p>
+         <h2>JavaScript String matchAll()</h2>
+         <p id="demo4"></p>
+         <h2>JavaScript String includes()</h2>
+         <p id="demo5"></p>
          <script>
              let text = "Please locate where 'locate' occurs!";
              let index = text.indexOf("locate");
@@ -26,8 +32,22 @@
         </script>
          <script>
             let text2 = "Please locate where 'locate' occurs!";
-            let index2 = text2.search("locate");
+            let index2 = text2.search(/locate/);
             document.getElementById('demo2').innerHTML=index2;
+        </script>
+        <script>
+            let text3 = "The rain in SPAIN stays mainly in the plain";
+            let match=text3.match(/ain/gi);
+            document.getElementById('demo3').innerHTML=match;
+        </script>
+        <script>
+            let text4 = "I love cats. Cats are very easy to love. Cats are very popular."
+            const iterator =text4.matchAll(/Cats/gi);
+            document.getElementById('demo4').innerHTML=Array.from(iterator);
+        </script>
+        <script>
+            let text5 = "Hello world, welcome to the universe.";
+            document.getElementById("demo5").innerHTML = text5.includes("world");
         </script>
     </body>
 </html>
