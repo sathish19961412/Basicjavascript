@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no" />
+    <title>js string templates</title>
+</head>
+<body>
+   <!--Synonyms:
+        Template Literals
+        Template Strings
+        String Templates
+        Back-Tics Syntax
+-->
+
+<p id="demo"></p>
+<h2>Template literals allows multiline strings:</h2>
+<p id="demo1"></p>
+<h2>Variable Substitutions</h2>
+<p id="demo2"></p>
+<h2>Expression Substitution</h2>
+<p id="demo3"></p>
+<h2>HTML Templates</h2>
+<p id="demo4"></p>
+<!-- <script>
+   const object=
+   {
+      name:'sathish',
+      age:26,
+      city:'coimbatore'
+   }
+   document.getElementById('demo').innerHTML=object.name + '<br>' + object.age + '<br>' + object.city;
+   let font=document.getElementById('demo1').style.fontSize='100px';
+</script> -->
+<script>
+    let text=`Hello "World!"`;
+    document.getElementById('demo').innerHTML=text;
+</script>
+<script>
+    let text1=`
+    The quick
+    brown fox
+    jumps over
+    the lazy dog`
+    ;
+    document.getElementById('demo1').innerHTML=text1;
+</script>
+<script>
+    let fisrtname='sathish';
+    let lastname='mathew';
+
+    let text2=`Welcome ${fisrtname},${lastname}`;
+    document.getElementById('demo2').innerHTML=text2;
+</script>
+<script>
+    let price = 10;
+    let VAT = 0.25;
+
+    let total = `Total: ${(price * (1 + VAT)).toFixed(2)}`;
+    document.getElementById('demo3').innerHTML=total;
+</script>
+<script>
+    let header = "Templates Literals";
+    let tags = [
+        "template literals", 
+        "javascript", 
+        "es6"
+    ];
+    let html = `<h2>${header}</h2><ul>`;
+        for (const x in tags) {
+          html += `<p>${x}</p>`;
+        }
+
+    html += `</ul>`;
+    document.getElementById('demo4').innerHTML=html;
+</script>
+</body>
+</html>
