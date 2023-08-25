@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no"/>
+        <title>javascript Number</title>
+    </head>
+    <body>
+        <h3>JavaScript Numbers</h3>
+        <p id="demo"></p>
+        <h3>JavaScript Numbers</h3>
+        <p id="demo1">Extra large or extra small numbers can be written with scientific (exponent) notation</p>
+        <h3>Integer Precision</h3>
+        <p id="demo2"></p>
+        <h3>Floating Precision</h3>
+        <p id="demo3"></p>
+        <h3>Numeric Strings</h3>
+        <p id="demo4"></p>
+        <script>
+          
+            let x=2.14;
+            let y=2;
+            document.getElementById('demo').innerHTML= x + '<br> ' + y;
+        </script>
+        <script>
+          
+            let x1=123e5;
+            let y1=122e-5;
+            document.getElementById('demo1').innerHTML= x1 + '<br> ' + y1;
+        </script>
+        <script>
+            let x2=999999999999999;
+            let y2=9999999999999999;
+            document.getElementById('demo2').innerHTML= x2 + '<br> ' + y2;
+        </script>
+        <script>
+            let x3=0.2+0.1;
+            let y3 = (0.2 * 10 + 0.1 * 10) / 10;
+            document.getElementById('demo3').innerHTML= x3 + '<br>' + y3;
+        </script>
+         <script>
+            let x4='100';
+            let y4= '10';
+            document.getElementById('demo4').innerHTML=x4/y4;
+        </script>
+    </body>
+</html>
