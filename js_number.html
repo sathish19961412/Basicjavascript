@@ -16,6 +16,10 @@
         <p id="demo3"></p>
         <h3>Numeric Strings</h3>
         <p id="demo4"></p>
+        <h3>A number divided by a non-numeric string becomes NaN (Not a Number):</h3>
+        <p id="demo5"></p>
+        <h3>Infinity</h3>
+        <p id="demo6"></p>
         <script>
           
             let x=2.14;
@@ -42,6 +46,18 @@
             let x4='100';
             let y4= '10';
             document.getElementById('demo4').innerHTML=x4/y4;
+        </script>
+        <script>
+            document.getElementById('demo5').innerHTML=100/"sathish";
+        </script>
+          <script>
+            let myNumber = 2; 
+            let txt = "";
+            while(myNumber != Infinity) {
+                myNumber = myNumber * myNumber;
+                txt = txt + myNumber + "<br>";
+            }
+            document.getElementById("demo6").innerHTML = txt;
         </script>
     </body>
 </html>
