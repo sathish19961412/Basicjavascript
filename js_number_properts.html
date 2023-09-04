@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no"/>
+        <title>JavaScript Number Properties</title>
+    </head>
+    <body>
+        <!--
+            Number Properties additional
+            1.JavaScript MAX_SAFE_INTEGER
+            2.JavaScript MIN_SAFE_INTEGER
+            3.JavaScript POSITIVE_INFINITY
+            4.JavaScript NEGATIVE_INFINITY
+            5.JavaScript NaN - Not a Number
+        -->
+        <h2>JavaScript EPSILON</h2>
+        <p id="demo"></p>
+        <h2>JavaScript MAX_VALUE</h2>
+        <p id="demo1"></p>
+        <h2>JavaScript MIN_VALUE</h2>
+        <p id="demo2"></p>
+        <script>
+           let x = Number.EPSILON;
+           let y=typeof x;
+          document.getElementById("demo").innerHTML =x;
+        </script>
+        <script>
+            let x1 = Number.MAX_VALUE;
+            let y1=typeof x1;
+           document.getElementById("demo1").innerHTML =x1;
+         </script>
+          <script>
+            let x2 = Number.MIN_VALUE;
+            let y2=typeof x2;
+           document.getElementById("demo2").innerHTML =x2;
+         </script>
+    </body>
+</html>
