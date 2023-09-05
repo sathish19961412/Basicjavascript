@@ -12,6 +12,21 @@
         <p id="demo1"></p>
         <h2>Using the JavaScript Keyword new</h2>
         <p id="demo2"></p>
+        <h2>Accessing Array Elements</h2>
+        <p id="demo3"></p>
+        <h2>Changing an Array Element</h2>
+        <p id="demo4"></p>
+        <h2>Converting an Array to a String</h2>
+        <p id="demo5"></p>
+        <h2>Arrays are Objects</h2>
+        <p id="demo6"></p>
+        <h2>Looping Array Elements</h2>
+        <p id="demo7"></p>
+        <h2>Array.forEach() function:</h2>
+        <p id="demo8"></p>
+        <h2>Adding Array Elements</h2>
+        <button onclick="myFunction()">Try it</button>
+        <p id="demo9"></p>
         <script>
            const cars=['Volvo','BMW','Saab'];
            cars[3]='sathish';
@@ -28,6 +43,72 @@
         <script>
             const cars2=new Array('Volvo','BMW','guru');
             document.getElementById('demo2').innerHTML=cars2;
+        </script>
+         <script>
+            const cars3=[];
+            cars3[0]='Volvo';
+            cars3[1]='BMW';
+            cars3[2]='Saab';
+            cars3[3]='sathish';
+            document.getElementById('demo3').innerHTML=cars3[2]+'<br>'+cars3[0];
+        </script>
+        <script>
+            const cars4=[];
+            cars4[0]='Volvo';
+            cars4[1]='BMW';
+            cars4[2]='Saab';
+            cars4[3]='sathish';
+            cars4[0]="guru";
+            document.getElementById('demo4').innerHTML=cars4[2]+'<br>'+cars4[0];
+        </script>
+        <script>
+            const cars5=['volvo','bmw','Saab']
+            document.getElementById('demo5').innerHTML=cars5.length;
+        </script>
+         <script>
+            const person={
+                firstName:"John", 
+                lastName:"Doe", 
+                age:46
+            }
+            document.getElementById('demo6').innerHTML=person['firstName']+ ' ' +person['lastName'];
+        </script>
+        <script>
+            const fruits = ["Banana", "Orange", "Apple", "Mango"];
+
+            let fLen = fruits.length;
+            
+            let text = "<ul>";
+
+            for (let i = 0; i < fLen; i++) {
+              text += "<li>" + fruits[i] + "</li>";
+            }
+
+            text += "</ul>";
+            
+            document.getElementById("demo7").innerHTML = text;
+        </script>
+            <script>
+                const fruits1 = ["Banana", "Orange", "Apple", "Mango"];
+
+                let text1 = "<ul>";
+                fruits1.forEach(myFunction);
+                text1 += "</ul>";
+
+                document.getElementById("demo8").innerHTML = text1;
+
+                function myFunction(value) {
+                text1 += "<li>" + value + "</li>";
+                } 
+        </script>
+        <script>
+            const fruits2 = ["Banana", "Orange", "Apple"];
+            document.getElementById("demo9").innerHTML = fruits2;
+
+            function myFunction() {
+            fruits2.push("Lemon");
+            document.getElementById("demo9").innerHTML = fruits2;
+            }
         </script>
     </body>
 </html>
