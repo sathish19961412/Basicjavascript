@@ -43,6 +43,8 @@
         <p id="demo10"></p>
         <h2>Merging (Concatenating) Arrays</h2>
         <p id="demo11"></p>
+        <h3>Flattening an Array</h3>
+        <p id="demo12"></p>
         <script>
            const fruits = ["Banana", "Orange", "Apple", "Mango"];
            document.getElementById('demo').innerHTML=fruits.length;
@@ -74,6 +76,20 @@
             const fruits6 = ["Banana", "Orange", "Apple", "Mango"];
             document.getElementById('demo9').innerHTML=fruits6.unshift('Lemon');
             document.getElementById('demo10').innerHTML=fruits6;
+        </script>
+        <script>
+            const myGirls=["Cecilie", "Lone"];
+            const myBoys=["Emil", "Tobias", "Linus"];
+
+            const myChildren=myGirls.concat(myBoys);
+
+            document.getElementById('demo11').innerHTML=myChildren;
+        </script>
+        <script>
+            const myArr = [[1,2],[3,4],[5,6]];
+            const newArr = myArr.flat();
+
+            document.getElementById('demo12').innerHTML=newArr;
         </script>
     </body>
 </html>
