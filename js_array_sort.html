@@ -27,7 +27,15 @@
         <p id="demo"></p>
         <h2>Reversing an Array</h2>
         <p id="demo1"></p>
-
+        <h2>Numeric Sort</h2>
+        <p id="demo2"></p>
+        <p id="demo3"></p>
+        <h2>The Compare Function</h2>
+        <div style="display:flex;">
+            <button onclick="myFunction1()">Sort Alphabetically</button>
+            <button onclick="myFunction2()">Sort Numerically</button>
+        </div>
+        <p id="demo4"></p>
         <script>
            const fruits = ["Banana", "Orange", "Apple", "Mango"];
            document.getElementById('demo').innerHTML=fruits.sort();
@@ -36,6 +44,28 @@
            const fruits1 = ["Banana", "Orange", "Apple", "Mango"];
            document.getElementById('demo1').innerHTML=fruits1.reverse();
         </script>
-      
+        <script>
+            const points = [40, 100, 1, 5, 25, 10];
+            document.getElementById("demo2").innerHTML = points;  
+
+            points.sort(function(a, b){
+                return a - b
+            });
+            document.getElementById("demo3").innerHTML = points;
+        </script>
+        <script>
+            const points1 = [40, 100, 1, 5, 25, 10];
+            document.getElementById("demo4").innerHTML = points1;
+
+            function myFunction1() {
+            points1.sort();
+            document.getElementById("demo4").innerHTML = points1;
+            }
+
+            function myFunction2() {
+            points1.sort(function(a, b){return a - b});
+            document.getElementById("demo4").innerHTML = points1;
+            }
+        </script>
     </body>
 </html>
