@@ -6,10 +6,17 @@
         <title>Date() Objects Formats</title>
     </head>
     <body>
-        <h1>JavaScript Dates Formats</h1>
+        <h1>JavaScript ISO Dates</h1>
         <p id="demo"></p>
+        <p id="demo1"></p>
         <script>
-            
+            const d = new Date("2015-03-25");
+            document.getElementById('demo').innerHTML=d;
+        </script>
+
+        <script>
+            const dd = new Date("JANUARY, 25, 2015");
+            document.getElementById("demo1").innerHTML = dd;
         </script>
     </body>
 </html>
