@@ -9,9 +9,19 @@
         <h2>Using new Date()</h2>
 
         <p id="demo"></p>
+        <p id="demo1"></p>
+        <p id="demo2"></p>
         <script>
-            const d = new Date("2022-03-25");
+            const d = new Date();
             document.getElementById("demo").innerHTML = d;
+        </script>
+        <script>
+            const sd = new Date('1996-12-14');
+            document.getElementById("demo1").innerHTML = sd;
+        </script>
+        <script>
+            const sds=new Date(1996,11,14,10,30,30,0);
+            document.getElementById('demo2').innerHTML=sds;
         </script>
     </body>
 </html>
