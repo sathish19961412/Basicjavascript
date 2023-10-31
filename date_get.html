@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <title>Date() Objects Get</title>
+    </head>
+    <body>
+        <h1>JavaScript Date() Objects Set Methods </h1>
+        <h3>The getFullYear() Method</h3>
+        <p id="demo"></p>
+        <h3>The getMonth() Method</h3>
+        <p id="demo1"></p>
+        <h3>The getDate() Method</h3>
+        <p id="demo2"></p>
+        <h3>The getHours() Method</h3>
+        <p id="demo3"></p>
+        <h3>The getMinutes() Method</h3>
+        <p id="demo4"></p>
+        <h3>The getSeconds() Method</h3>
+        <p id="demo5"></p>
+        <h3>The getMilliseconds() Method</h3>
+        <p id="demo6"></p>
+        <script>
+            const d = new Date("2021-03-25")
+            document.getElementById("demo").innerHTML = d.getFullYear();
+        </script>
+         <script>
+            const d1 = new Date("2021-03-25")
+            document.getElementById("demo1").innerHTML = d1.getMonth()+1;
+        </script>
+         <script>
+            const d2 = new Date()
+            document.getElementById("demo2").innerHTML = d2.getDate();
+        </script>
+        <script>
+            const d3 = new Date("2021-03-25")
+            document.getElementById("demo3").innerHTML = d3.getHours();
+        </script>
+         <script>
+            const d4 = new Date("2021-03-25")
+            document.getElementById("demo4").innerHTML = d4.getMinutes();
+        </script>
+          <script>
+            const d5 = new Date("2021-03-25")
+            document.getElementById("demo5").innerHTML = d5.getSeconds();
+        </script>
+        <script>
+           const d6 = new Date("2021-03-25");
+            document.getElementById('demo6').innerHTML=d6.getMilliseconds();
+        </script>
+    </body>
+</html>
