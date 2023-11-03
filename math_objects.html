@@ -6,11 +6,68 @@
         <title>JavaScript Math Object</title>
     </head>
     <body>
+        <!--
+
+            JavaScript Math Methods
+            Method	Description
+            abs(x)	Returns the absolute value of x
+            acos(x)	Returns the arccosine of x, in radians
+            acosh(x)	Returns the hyperbolic arccosine of x
+            asin(x)	Returns the arcsine of x, in radians
+            asinh(x)	Returns the hyperbolic arcsine of x
+            atan(x)	Returns the arctangent of x as a numeric value between -PI/2 and PI/2 radians
+            atan2(y, x)	Returns the arctangent of the quotient of its arguments
+            atanh(x)	Returns the hyperbolic arctangent of x
+            cbrt(x)	Returns the cubic root of x
+            ceil(x)	Returns x, rounded upwards to the nearest integer
+            cos(x)	Returns the cosine of x (x is in radians)
+            cosh(x)	Returns the hyperbolic cosine of x
+            exp(x)	Returns the value of Ex
+            floor(x)	Returns x, rounded downwards to the nearest integer
+            log(x)	Returns the natural logarithm (base E) of x
+            max(x, y, z, ..., n)	Returns the number with the highest value
+            min(x, y, z, ..., n)	Returns the number with the lowest value
+            pow(x, y)	Returns the value of x to the power of y
+            random()	Returns a random number between 0 and 1
+            round(x)	Rounds x to the nearest integer
+            sign(x)	Returns if x is negative, null or positive (-1, 0, 1)
+            sin(x)	Returns the sine of x (x is in radians)
+            sinh(x)	Returns the hyperbolic sine of x
+            sqrt(x)	Returns the square root of x
+            tan(x)	Returns the tangent of an angle
+            tanh(x)	Returns the hyperbolic tangent of a number
+            trunc(x)	Returns the integer part of a number (x)
+        -->
         <h1>JavaScript Math Object</h1>
+        <h4>Number to Integer - Math.round() method</h4>
         <p id="demo"></p>
+        <h4>Number to Integer - Math.celi() method</h4>
+        <p id="demo1"></p>
+        <h4>Number to Integer - Math.floor() method</h4>
+        <p id="demo2"></p>
+        <h4>Number to Integer - Math.sign() method</h4>
+        <p id="demo3"></p>
+        <h4>Number to Integer - Math.pow() method</h4>
+        <p id="demo4"></p>
+        <h4>Number to Integer - Math.sqrt() method</h4>
+        <p id="demo5"></p>
         <script>
-          
+            document.getElementById('demo').innerHTML=Math.round(4.6);
         </script>
-        
+        <script>
+            document.getElementById('demo1').innerHTML=Math.ceil(4.6);
+        </script>
+        <script>
+            document.getElementById('demo2').innerHTML=Math.floor(4.6);
+        </script>
+        <script>
+            document.getElementById('demo3').innerHTML=Math.sign(4.6);
+        </script>
+        <script>
+            document.getElementById('demo4').innerHTML=Math.pow(8,2);
+        </script>
+        <script>
+            document.getElementById('demo5').innerHTML=Math.sqrt(81);
+        </script>
     </body>
 </html>
