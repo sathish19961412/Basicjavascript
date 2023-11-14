@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    </head>
+    <body>
+        <!--
+            1.The Boolean value of -0 (minus zero) is false.
+            2.The Boolean value of "" (empty string) is false:
+            3.The Boolean value of undefined is false:
+            4.The Boolean value of null is false:
+            5.The Boolean value of false is (you guessed it) false:
+            6.The Boolean value of NaN is false:
+
+
+
+        -->
+        <h2>The Boolean() Function</h2>
+        <p id="demo"></p>
+        <p id="demo1"></p>
+        <h2>Everything Without a "Value" is False</h2>
+        <p id="demo2"></p>
+        <h2>JavaScript Booleans as Objects</h2>
+        <p id="demo3"></p>
+        <script>
+            document.getElementById("demo").innerHTML = Boolean(10 > 9);
+        </script>
+         <script>
+            document.getElementById("demo1").innerHTML = 10 > 9;
+        </script>
+        <script>
+            let x=0;
+            document.getElementById('demo2').innerHTML=Boolean(x);
+        </script>
+        <script>
+            // x is a boolean
+            let x1 = false;
+
+            // y is an object
+            let y = new Boolean(false);
+
+            document.getElementById("demo3").innerHTML = typeof x1 + "<br>" + typeof y;
+        </script>
+    </body>
+</html>
