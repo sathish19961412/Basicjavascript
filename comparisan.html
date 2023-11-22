@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Javascript Comparisan</title>
+    </head>
+    <body>
+        <!--
+            >	greater than	x > 8	false	
+            <	less than	x < 8	true	
+            >=	greater than or equal to	x >= 8	false	
+            <=	less than or equal to	x <= 8	true
+        -->
+        <h1>JavaScript Comparison</h1>
+        <h2>The == Operator</h2>
+
+        <p>Assign 5 to x, and display the value of the comparison (x == 8):</p>
+        <p id="demo"></p>
+
+        <h2>The === Operator</h2>
+
+        <p>Assign 5 to x, and display the value of the comparison (x === 5):</p>
+        <p id="demo1"></p>
+
+        <h2>The != Operator</h2>
+        <p>Assign 5 to x, and display the value of the comparison (x != 8).</p>
+        <p id="demo2"></p>
+        <h2>The !== Operator</h2>
+
+        <p>Assign 5 to x, and display the value of the comparison (x !== 5):</p>
+        
+        <p id="demo3"></p>
+        <script>
+            let x = 5;
+            let y = 8;
+            let z = '5';
+            document.getElementById("demo").innerHTML = (z == 5);
+        </script>
+        <script>
+            let x1 = 5;
+            let y1 = 8;
+            let z1 = '5';
+            document.getElementById("demo1").innerHTML = (x1 === 5);
+        </script>
+        <script>
+            let x2 = 5;
+            let y2 = 8;
+            let z2 = '5';
+            document.getElementById("demo2").innerHTML = (x2 != 8);
+        </script>
+        <script>
+            let x3 = 5;
+            let y3 = 8;
+            let z3 = '5';
+            document.getElementById("demo3").innerHTML = (x3 !== 8);
+        </script>
+    </body>
+</html>
