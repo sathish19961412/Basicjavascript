@@ -8,10 +8,36 @@
     </head>
     <body>
         <!--
-            >	greater than	x > 8	false	
-            <	less than	x < 8	true	
-            >=	greater than or equal to	x >= 8	false	
-            <=	less than or equal to	x <= 8	true
+            Comparison Operators
+
+            1. ==	equal to	x == 8	false	
+               x == 5	true	
+               x == "5"	true	
+            2.  ===	equal value and equal type	x === 5	true	
+                x === "5"	false	
+            3.  !=	not equal	x != 8	true	
+            4.  !==	not equal value or not equal type	x !== 5	false	
+                x !== "5"	true	
+                x !== 8	true	
+            5. >	greater than	x > 8	false	
+            6. <	less than	x < 8	true	
+            7. >=	greater than or equal to	x >= 8	false	
+            8. <=	less than or equal to	x <= 8	true
+        -->
+        <!--
+            Logical Operators
+
+           1. &&    and (x < 10 && y > 1) is true	
+           2. ||    or	 (x == 5 || y == 5) is false	
+           3. !	not	! (x == y) is true
+
+        -->
+        <!--
+            Conditional (Ternary) Operator
+
+            1.variablename = (condition) ? value1:value2 
+            2.let voteable = (age < 18) ? "Too young":"Old enough";
+
         -->
         <h1>JavaScript Comparison</h1>
         <h2>The == Operator</h2>
@@ -32,6 +58,7 @@
         <p>Assign 5 to x, and display the value of the comparison (x !== 5):</p>
         
         <p id="demo3"></p>
+        
         <script>
             let x = 5;
             let y = 8;
