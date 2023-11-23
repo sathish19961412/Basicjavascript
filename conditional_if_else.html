@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Conditional Statements</title>
+
+    </head>
+    <body>
+        <!--
+            In JavaScript we have the following conditional statements:
+            
+            Use if to specify a block of code to be executed, if a specified condition is true
+            Use else to specify a block of code to be executed, if the same condition is false
+            Use else if to specify a new condition to test, if the first condition is false
+            Use switch to specify many alternative blocks of code to be executed
+        -->
+
+        <h3>
+            The if Statement
+        </h3>
+        <h4>
+            Use the if statement to specify a block of JavaScript code to be executed if a condition is true.
+        </h4>
+        <p>
+            Syntax:
+            if (condition) { <br>
+
+            //block of code to be executed if the condition is true<br>
+
+            }
+      
+        </p>
+
+        <p id="demo">Good Evening!</p>
+
+        <h3>
+            The else Statement
+        </h3>
+        <h4>
+            Use the else statement to specify a block of code to be executed if the condition is false.
+        </h4>
+        <p>
+            if (condition) { <br>
+                //  block of code to be executed if the condition is true<br>
+            } else {<br>
+                //  block of code to be executed if the condition is false<br>
+              }
+      
+        </p>
+        <p id="demo1"></p>
+
+        <h3>
+            The else if Statement
+        </h3>
+        <h4>
+            Use the else if statement to specify a new condition if the first condition is false.
+        </h4>
+        <p>
+            if (condition1) {<br>
+                //  block of code to be executed if condition1 is true
+            } else if (condition2) {<br>
+                //  block of code to be executed if the condition1 is false and condition2 is true<br>
+            } else {<br>
+                //  block of code to be executed if the condition1 is false and condition2 is false<br>
+            }
+        </p>
+        <p id="demo2"></p>
+        <script>
+            if (new Date().getHours() < 18) {
+              document.getElementById("demo").innerHTML = "Good day!";
+            }
+        </script>
+        <script>
+            const hour=new Date().getHours();
+            let greeting;
+
+            if(hour<18){
+                greeting='Good day';
+            }else{
+                greeting='Good Evening';
+            }
+            document.getElementById('demo1').innerHTML=greeting;
+        </script>
+      <script>
+        const time = new Date().getHours();
+        let greeting1;
+        if (time < 10) {
+          greeting1 = "Good morning";
+        } else if (time < 20) {
+          greeting1 = "Good day";
+        } else {
+          greeting1 = "Good evening";
+        }
+        document.getElementById("demo2").innerHTML = greeting1;
+        </script>
+        
+    </body>
+</html>
