@@ -13,10 +13,53 @@
         <link rel="stylesheet" href="">
     </head>
     <body>
-        <!--[if lt IE 7]>
-            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
-        
-        <script src="" async defer></script>
+        <h2>The JavaScript Switch Statement</h2> 
+        <p>Use the switch statement to select one of many code blocks to be executed.</p>
+        <p>
+            Syntax:<br>
+            switch(expression) {<br>
+            case x:<br>
+                // code block
+                break;<br>
+            case y:
+                // code block
+                break;<br>
+            default:
+                // code block
+            }<br>
+        </p>
+
+        <p id="demo"></p>
+        <script>
+            
+            let day;
+
+            switch (new Date().getDay()) {
+                case 0:
+                    day = "Sunday";
+                    break;
+                case 1:
+                    day = "Monday";
+                    break;
+                case 2:
+                    day = "Tuesday";
+                    break;
+                case 3:
+                    day = "Wednesday";
+                    break;
+                case 4:
+                    day = "Thursday";
+                    break;
+                case 5:
+                    day = "Friday";
+                    break;
+                case  6:
+                    day = "Saturday";
+
+            }
+
+            document.getElementById("demo").innerHTML = " Today is " + day;
+
+        </script>
     </body>
 </html>
