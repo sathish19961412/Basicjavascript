@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>javascript break & continue </title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+       <h3>The Break Statement</h3>
+       <p>The break statement can also be used to jump out of a loop:</p>
+       <p id="demo"></p>
+       <h3>The Continue Statement</h3>
+       <p>This example skips the value of 3:</p>
+       <p id="demo1"></p>
+       <script>
+        let text = "";
+        for (let i = 0; i < 10; i++) {
+          if (i === 3) 
+          { 
+            break; 
+          }
+          text += "The number is " + i + "<br>";
+        }
+        
+        document.getElementById("demo").innerHTML = text;
+        </script>
+        <script>
+            let text1 = "";
+            for (let i = 0; i < 10; i++) {
+              if (i === 3) 
+              { 
+                continue; 
+              }
+              text1 += "The number is " + i + "<br>";
+            }
+            
+            document.getElementById("demo1").innerHTML = text1;
+        </script>
+    </body>
+</html>

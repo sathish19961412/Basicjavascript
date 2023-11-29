@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>javascript while loop</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+      <h3>Javascript  while Loop</h3>
+      <p>The while loop loops through a block of code as long as a specified condition is true.</p>
+      <p id="demo"></p>
+      <h3>JavaScript Do While Loop</h3>
+      <p id="demo1"></p>
+      <h3>The loop in this example uses a while loop to collect the car names from the cars array:</h3>
+      <p id="demo2"></p>
+      <script>
+        let text =[];
+        let i = 0;
+        while (i < 10) {
+          text += "<br>The number is " + i;
+          i++;
+        }
+        document.getElementById("demo").innerHTML = text;
+        </script>
+        
+    <script>
+        let text1 = ""
+        let j = 0;
+    
+        do {
+        text1 += "<br>The number is " + j;
+        j++;
+        }
+        while (j < 10);  
+    
+        document.getElementById("demo1").innerHTML = text1;
+    </script>
+    <script>
+            const cars = ["BMW", "Volvo", "Saab", "Ford"];
+            
+            let ij = 0;
+            let text2 = "";
+            while (cars[ij]) {
+              text2+= cars[ij] + "<br>";
+              ij++;
+            }
+            
+            document.getElementById("demo2").innerHTML = text2;
+    </script>
+    </body>
+</html>
