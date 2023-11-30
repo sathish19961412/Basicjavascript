@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Javascript iterables</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+       <h2>The For Of Loop</h2>
+       <p>The JavaScript for..of statement loops through the elements of an iterable object.</p>
+       <p id="demo"></p>
+       <h2>Iterating Over an Array</h2>
+       <p id="demo1"></p>
+       <h2>Iterating Over a Set</h2>
+       <p id="demo2"></p>
+       <h2>Iterating Over a Map</h2>
+       <p id="demo3"></p>
+       <script>
+            //Create a String
+            const name='sathish';
+
+            //List all Elements
+            let text='';
+            for(let x of name){
+                text+=x+'<br>';
+            }
+            document.getElementById('demo').innerHTML=text;
+       </script>
+       <script>
+           //Create a Array
+           const letters=['a','b','c']
+
+           let text1='';
+           for(const y of letters)
+           {
+                text1+=y+'<br>';
+           }
+           document.getElementById('demo1').innerHTML=text1;
+       </script>
+
+       <script>
+        // Create a Set
+        const letters1 = new Set(["a","b","c"]);
+        
+        // List all Elements
+        let text2 = ""; 
+        for (const x of letters) {
+          text2 += x + "<br>";
+        }
+        
+        document.getElementById("demo2").innerHTML = text2;
+        </script>
+
+        <script>
+        // Create a Map
+        const fruits = new Map([
+            ["apples", 500],
+            ["bananas", 300],
+            ["oranges", 200]
+        ]);
+        
+        // List all entries
+        let text3 = "";
+        for (const x4 of fruits) {
+            text3 += x4 + "<br>";
+        }
+        
+        document.getElementById("demo3").innerHTML = text3;
+        </script>
+    </body>
+</html>
