@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Javascript Set</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+       <h2>The new Set() Method</h2>
+       <p>Pass an Array to the new Set() constructor:</p>
+       <p id="demo"></p>
+       <script>
+          //Create Set
+          const letters=new Set(['a','b','c'])
+
+          letters.add('g');
+          let text='';
+          letters.forEach(function(value){
+            text+=value+'<br>';
+          })
+          document.getElementById('demo').innerHTML=text;
+       </script>
+    </body>
+</html>
