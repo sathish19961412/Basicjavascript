@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Javascript Maps</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <h2>JavaScript Maps</h2>
+        <p>You can create a Map by passing an Array to the new Map() constructor:</p>
+        <p id="demo"></p>
+        <p id="demo1"></p>
+        <h2>The forEach() Method</h2>
+        <p id="demo2"></p>
+        <h2>The Entries() Method</h2>
+        <p id="demo3"></p>
+        <script>
+            // Create a Map
+                const fruits = new Map([
+                ["apples", 500],
+                ["bananas", 300],
+                ["oranges", 200]
+                ]);
+
+                //Add elements
+                fruits.set("apples1", 700);
+                // Delete an Element
+                fruits.delete("apples1");
+
+                //Javascript Map Objects
+                let text = "";
+                let text1='';
+
+                fruits.forEach (function(value, key) {
+                    text += key + ' = ' + value + "<br>"
+                })
+                //Javascript Map entries()
+                  
+                for (const x of fruits.entries()){
+                    text1 += x + "<br>"
+                }
+
+                document.getElementById("demo").innerHTML = fruits.get("apples");
+                document.getElementById("demo1").innerHTML = fruits.size;
+                document.getElementById("demo2").innerHTML = text;
+                document.getElementById("demo3").innerHTML = text1;
+        </script>
+    </body>
+</html>
