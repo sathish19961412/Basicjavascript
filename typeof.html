@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+       <div>
+        <p>
+            JavaScript there are 5 different data types that can contain values:<br>
+
+            *string
+            *number
+            *boolean
+            *object
+            *function
+        </p> 
+        <p>
+            There are 6 types of objects:<br>
+            
+            *Object
+            *Date
+            *Array
+            *String
+            *Number
+            *Boolean
+        </p> 
+        <p>
+            And 2 data types that cannot contain values:<br>
+        
+            *null
+            *undefined
+        </span> 
+        </div> 
+        <p id="demo"></p>
+        <h3>The constructor Property</h3>
+        <p>The constructor property returns the constructor function for all JavaScript variables.</p>
+        <p id="demo1"></p>
+        <h3>JavaScript Array Object</h3>
+        <p id="demo2"></p>
+        <p>
+            <a href="javascript:void(document.body.style.backgroundColor='red');">
+            Click me to change the background color of body to red.</a>
+        </p>
+    <script>
+        document.getElementById("demo").innerHTML = 
+        "'John' is " + typeof '7' + "<br>" +
+        "3.14 is " + typeof 3.14 + "<br>" +
+        "NaN is " + typeof NaN + "<br>" +
+        "false is " + typeof false + "<br>" +
+        "[1, 2, 3, 4] is " + typeof [1, 2, 3, 4] + "<br>" +
+        "{name:'John', age:34} is " + typeof {name:'John', age:34} + "<br>" +
+        "new Date() is " + typeof new Date() + "<br>" +
+        "function () {} is " + typeof function () {} + "<br>" +
+        "myCar is " + typeof myCar + "<br>" +
+        "null is " + typeof null;
+    </script>
+    
+ <script>
+    document.getElementById("demo1").innerHTML = 
+      "john".constructor + "<br>" +
+      (3.14).constructor + "<br>" +
+      false.constructor + "<br>" +
+      [1,2,3,4].constructor + "<br>" +
+      {name:'john', age:34}.constructor + "<br>" +
+      new Date().constructor + "<br>" +
+      function () {}.constructor;
+    </script>
+    <script>
+        const fruits = ["Banana", "Orange", "Apple", "Mango"];
+        document.getElementById("demo2").innerHTML = isArray(fruits);
+        
+        function isArray(myArray) {
+          return myArray.constructor === Array;
+        }
+        </script>
+    </body>
+</html>
