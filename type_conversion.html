@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <h1>JavaScript Type Conversion</h1>
+        <p>
+            1.Converting Strings to Numbers<br>
+            2.Converting Numbers to Strings<br>
+            3.Converting Dates to Numbers<br>
+            4.Converting Numbers to Dates<br>
+            5.Converting Booleans to Numbers<br>
+            6.Converting Numbers to Booleans
+        </p>
+        <p id="demo"></p>
+        <p id="demo1"></p>
+        <script>
+            document.getElementById("demo").innerHTML =
+            Number("3.14") + "<br>" +
+            Number(Math.PI) + "<br>" +
+            Number("    ") + "<br>" +
+            Number("") + "<br>" +
+            Number("99 88") + "<br>" +
+            Number("John") + "<br>";
+        </script>
+        
+    <script>
+        let x = 123;
+        document.getElementById("demo1").innerHTML =
+         typeof Number(x) + "<br>" +
+         typeof String(123) + "<br>" +
+         typeof String(100 + 23);
+    </script>
+    </body>
+</html>
