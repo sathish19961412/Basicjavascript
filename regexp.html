@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Regular Expression</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <h1>JavaScript Regular Expression</h1>
+        <p>Using String search() With a String</p>
+        <p id="demo"></p>
+        <button onclick="myFunction()">Try it</button>
+        <p id="demo1">Please visit Microsoft!</p>
+        <script>
+            let text = "Visit W3Schools!"; 
+            let n = text.search("W3Schools");
+            document.getElementById("demo").innerHTML = n;
+        </script>
+        <script>
+            function myFunction() {
+              let text = document.getElementById("demo1").innerHTML;
+              document.getElementById("demo1").innerHTML =text.replace("Microsoft","W3Schools");
+            }
+        </script>
+    </body>
+</html>
