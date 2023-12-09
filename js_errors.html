@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Js errors</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+       <h2>
+        Throw, and Try...Catch...Finally
+       </h2>
+       <p>
+        The <b>try</b> statement defines a code block to run (to try).<br>
+
+        The <b>catch</b> statement defines a code block to handle any error.<br>
+
+        The <b>finally</b> statement defines a code block to run regardless of the result.<br>
+
+        The <b>statement</b> defines a custom error.
+       </p>
+       <p>
+        <h1>Error Name Values</h1><br>
+        <h2>Six different values can be returned by the error name property:</h2><br>
+            EvalError-An error has occurred in the eval() function<br>
+            RangeError-A number "out of range" has occurred<br>
+            ReferenceError-An illegal reference has occurred<br>
+            SyntaxError-A syntax error has occurred<br>
+            TypeError-A type error has occurred<br>
+            URIError-An error in encodeURI() has occurred<br>
+       </p>
+       <h2>Errors Will Happen!</h2>
+       <p id="demo"></p>
+       <h2>Input Validation Example</h2>
+       <p>Please input a number between 5 and 10:</p>
+       <input id="demo1" type="text">
+       <button type="button" onclick="myFunction()">Test Input</button>
+       <p id="p01"></p>
+       <p>Please input a number between 5 and 10:</p>
+       <input id="demo2" type="text">
+       <button type="button" onclick="myFunction1()">Test Input</button>
+       <p id="p02"></p>
+       <script>
+            try {
+             adddlert("Welcome guest!");
+            }
+            catch(err) {
+                document.getElementById("demo").innerHTML = err.message;
+            }
+       </script>
+       <script>
+        function myFunction() {
+
+          const message = document.getElementById("p01");
+          message.innerHTML = "";
+          let x = document.getElementById("demo1").value;
+
+          try { 
+            if(x.trim() == "")  throw "empty";
+            if(isNaN(x)) throw "not a number";
+            x = Number(x);
+            if(x < 5)  throw "too low";
+            if(x > 10)   throw "too high";
+          }
+          catch(err) {
+            message.innerHTML = "Input is " + err;
+          }
+
+        }
+        </script>
+        
+    <script>
+        function myFunction1() {
+        const message = document.getElementById("p02");
+        message.innerHTML = "";
+        let x = document.getElementById("demo2").value;
+        try { 
+            if(x.trim() == "")  throw "is empty";
+            if(isNaN(x)) throw "is not a number";
+            x = Number(x);
+            if(x > 10)   throw "is too high";
+            if(x < 5)  throw "is too low";
+        }
+        catch(err) {
+            message.innerHTML = "Input " + err;
+        }
+        finally {
+            document.getElementById("demo2").value = "";
+        }
+        }
+    </script>
+    </body>
+</html>
