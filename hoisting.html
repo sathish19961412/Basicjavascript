@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>JavaScript Hoisting</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <h1>JavaScript Declarations are Hoisted</h1>
+        <p id="demo"></p>
+        <h1>let and const Keywords</h1>
+        <h3>This will result in a ReferenceError:</h3>
+        <p>With <b>let</b>, you cannot use a variable before it is declared.</p>
+        <p id="demo1"></p>
+        <h2>JavaScript Initializations are Not Hoisted</h2>
+        <p id="demo2"></p>
+        <p id="demo3"></p>
+        <script>
+            x = 5; // Assign 5 to x
+
+            elem = document.getElementById("demo");
+            elem.innerHTML=x;
+
+            var x; // Declare x
+        </script>
+
+        <script>
+                try {
+                carName = "Saab";
+                let carName = "Volvo";
+                }
+                catch(err) {
+                document.getElementById("demo1").innerHTML = err;
+                }
+        </script>
+        
+        <script>
+
+            var x1 = 5; // Initialize x
+            var y1 = 7; // Initialize y
+            
+            elem1 = document.getElementById("demo2"); // Find an element 
+            elem1.innerHTML = x1 + " " + y1;       // Display x and y
+            
+        </script>
+        <script>
+            var x2 = 5; // Initialize x
+            var y2;   // Declare y
+            
+            elem = document.getElementById("demo3"); // Find an element 
+            elem.innerHTML = x2 + " " + y2;       // Display x and y
+            
+            y2 = 7;   // Assign 7 to y
+            
+        </script>
+    </body>
+</html>

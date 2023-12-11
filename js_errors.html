@@ -31,7 +31,7 @@
             ReferenceError-An illegal reference has occurred<br>
             SyntaxError-A syntax error has occurred<br>
             TypeError-A type error has occurred<br>
-            URIError-An error in encodeURI() has occurred<br>
+            URIError-An error in encodeURI() has occurred<br>    
        </p>
        <h2>Errors Will Happen!</h2>
        <p id="demo"></p>
@@ -60,7 +60,7 @@
           let x = document.getElementById("demo1").value;
 
           try { 
-            if(x.trim() == "")  throw "empty";
+            if(x.trim() == "")  catch "empty";
             if(isNaN(x)) throw "not a number";
             x = Number(x);
             if(x < 5)  throw "too low";

@@ -10,7 +10,7 @@
         <h2>JavaScript Scope</h2>
         <p>
             Block scope<br>
-            Function scope<br>
+            Function scope or Local Scope<br>
             Global scope<br>
         </p>
         <h2>Block Scope</h2>
@@ -25,7 +25,32 @@
             }<br>
               // x CAN be used here
         </div>
+
         <h2>Local Scope</h2>
+        <p>Variables declared within a JavaScript function, become LOCAL to the function.</p>
+        <p id="demo1"></p>
+        <p id="demo2"></p>
+        <h2>Global JavaScript Variables</h2>
+        <p id="demo3"></p>
+        <script>
+
+            function myFunction() {
+                var carName = 'Volvo';
+              document.getElementById("demo1").innerHTML = typeof carName + " " + carName;
+            }
+            
+            document.getElementById("demo2").innerHTML = typeof carName;
+            myFunction();
+        </script>
+
+
+        <script>
+            let carName1 = "Volvo";
+            function myFunction1() {
+                document.getElementById("demo3").innerHTML = "I can display " + carName1;
+            }
+            myFunction1();
+        </script>
 
     </body>
 </html>
