@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Javascript this keywords</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <h1>The JavaScript this Keyword</h1>
+        <p>In JavaScript, the this keyword refers to an object.</p>
+        <p id="demo"></p>
+        <h1>this Alone</h1>
+        <p>
+            When used alone, this refers to the global object.
+
+            Because this is running in the global scope.
+            
+            In a browser window the global object is [object Window]:
+        </p>
+        <p id="demo1"></p>
+        <h1>Explicit Function Binding</h1>
+        <p>The call() and apply() methods are predefined JavaScript methods.</p>
+        <p id="demo2"></p>
+        <h2>Function Borrowing</h2>
+        <p id="demo3"></p>
+        <script>
+            // Create an object:
+            const person = {
+            firstName: "John",
+            lastName: "Doe",
+            id: 5566,
+            fullName : function() {
+                return this.firstName + " " + this.lastName;
+            }
+            };
+
+            // Display data from the object:
+            document.getElementById("demo").innerHTML = person.fullName();
+        </script>
+
+        <script>
+            let x = this;
+            document.getElementById("demo1").innerHTML = x;
+        </script>
+    
+        <script>
+            const person1 = {
+                fullName: function() {
+                    return this.firstName + " " + this.lastName;
+                }
+            }
+            
+            const person2 = {
+                firstName:"John",
+                lastName: "Doe",
+            }
+            
+            let x2 = person1.fullName.call(person2); 
+            document.getElementById("demo2").innerHTML = x2; 
+        </script>
+       <script>
+        const person4 = {
+          firstName1:"John",
+          lastName1: "Doe",
+          fullName1: function() {
+            return this.firstName1 + " " + this.lastName1;
+          }
+        }
+        
+        const member = {
+          firstName1:"Hege",
+          lastName1: "Nilsen",
+        }
+        
+        let fullName= person4.fullName1.bind(member);
+        
+        document.getElementById("demo3").innerHTML = fullName();
+        </script>
+    </body>
+</html>
