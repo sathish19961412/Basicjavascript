@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Javascript arrow function</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <h1>JavaScript Arrow Function</h1>
+        <p>Arrow functions were introduced in ES6.</p>
+        <p>Arrow functions allow us to write shorter function syntax:</p>
+        <p id="demo"></p>
+        <h2>Before Arrow:</h2>
+        <p id="demo1"></p>
+        <h2>After Arrow:</h2>
+        <p id="demo2"></p>
+        <h2>Arrow Function Return To the Defalut Value:</h2>
+        <p id="demo3"></p>
+        <h2>Arrow Function With Parameters:</h2>
+        <p id="demo4"></p>
+        <h2>Arrow Function Without Parentheses:</h2>
+        <p id="demo5"></p>
+        <button id="btn">Click Me!</button>
+        <p>With an arrow function this represents the owner of the function:</p>
+        <p id="demo6"></p>
+        <script>
+            let myFunction = (a, b) => a * b;
+            document.getElementById("demo").innerHTML = myFunction(4, 5);
+        </script>    
+
+        <script>
+            let hello='';
+            hello = function() {
+                return "Hello World!";
+            }
+            document.getElementById('demo1').innerHTML=hello();
+        </script> 
+
+        <script>
+            let hello1;
+            hello1=()=>{
+                return 'sathish';
+            }
+            document.getElementById('demo2').innerHTML=hello1();
+        </script>
+
+        <script>
+            let hello2;
+            hello2=()=>'sathish mathew';
+            document.getElementById('demo3').innerHTML=hello2();
+        </script>
+
+        <script>
+            let hello3='';
+            hello3=(val)=>' Hello ' + val;
+            document.getElementById('demo4').innerHTML=hello3('mathew');
+        </script>
+
+        <script>
+            let hello4='';
+            hello4=val=>'hello'+val;
+            document.getElementById('demo5').innerHTML=hello3('mathew sathish');
+        </script>
+        <script>
+            let hello5 = "";
+            
+            hello5 = function() {
+              document.getElementById("demo6").innerHTML += this;
+            }
+            
+            //The window object calls the function:
+            window.addEventListener("load", hello5);
+            
+            //A button object calls the function:
+            document.getElementById("btn").addEventListener("click", hello5);
+            
+            </script>
+    </body>
+</html>

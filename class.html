@@ -9,6 +9,8 @@
         <p id="demo"></p>
         <h2>Creating Class method</h2>
         <p id="demo1"></p>
+        <h2>You can send parameters to Class methods:</h2>
+        <p id="demo3"></p>
         <script>
             class Car{
                 constructor(name1,year1){
@@ -24,9 +26,9 @@
        
    <script>
         class Cars {
-            constructor(name, year) {
-                this.name = name;
-                this.year = year;
+            constructor(name2, year2) {
+                this.name = name2;
+                this.year = year2;
             
             }
             age(){
@@ -36,9 +38,29 @@
         }
 
         const car3=new Cars('Audi',2018);
-        document.getElementById('demo1').innerHTML="My Car age is" + car3.age() + "Year Old"; 
+        document.getElementById('demo1').innerHTML=" My Car age is " + car3.age() + "Year Old"; 
         
-     
     </script>
+    <script>
+        class Car1
+        {
+            constructor(name3,year3)
+            {
+                this.name3=name3;
+                this.year3=year3;
+            }
+            age(x)
+            {
+                return x - this.year3;
+            }
+            
+        }
+        const date = new Date();
+        let year3 = date.getFullYear();
+
+        const myCar = new Car1("Ford", 2014);
+        document.getElementById("demo3").innerHTML="My car is " + myCar.age(year3) + " years old.";
+    </script>
+           
     </body>
 </html>
