@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Js json</title>
+    </head>
+    <body>
+       <p>
+            JSON stands for JavaScript Object Notation<br>
+            JSON is a lightweight data interchange format<br>
+            JSON is language independent *<br>
+            JSON is "self-describing" and easy to understand<br>
+       </p>
+       <h2>JSON Example</h2>
+       <p>This JSON syntax defines an employees object: an array of 3 employee records (objects):</p>
+       <p id="demo"></p>
+       <script>
+        let text = '{"employees":[' +
+        '{"firstName":"John","lastName":"Doe" },' +
+        '{"firstName":"Anna","lastName":"Smith" },' +
+        '{"firstName":"Peter","lastName":"Jones" }]}';
+        
+        const obj = JSON.parse(text);
+        document.getElementById("demo").innerHTML =obj.employees[1].firstName + " " + obj.employees[1].lastName;
+        </script>
+    </body>
+</html>
