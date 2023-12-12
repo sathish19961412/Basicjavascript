@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>My First Web Page</h2>
+
+<p>Activate debugging in your browser (Chrome, IE, Firefox) with F12, and select "Console" in the debugger menu.</p>
+<p>With the debugger turned on, the code below should stop executing before it executes the third line.</p>
+<p id="demo"></p>
+<script>
+a = 7;
+b = 6;
+c = a + b;
+console.log(c);
+</script>
+<script>
+    let x = 15 * 5;
+    debugger;
+    document.getElementById("demo").innerHTML = x;
+    </script>
+    
+</body>
+</html> 
