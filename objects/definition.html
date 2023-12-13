@@ -1,14 +1,21 @@
 <!DOCTYPE html>
 <html>
+    <head>
+        <title>JavaScript Definition</title>
+    </head>
 <body>
-
 <h2>JavaScript definition</h2>
-
 <p id="demo"></p>
+<h2>Object Methods</h2>
+<p id="demo1"></p>
+<h2>Using the JavaScript Keyword new</h2>
+<p id="demo2"></p>
+<h2>JavaScript Objects are Mutable</h2>
+<p id="demo3"></p>
 
 <script>
 // Create and display a variable:
-let person = {
+const person = {
   firstName : "John",
   lastName  : "Doe",
   age     : 50,
@@ -17,6 +24,38 @@ let person = {
 
 document.getElementById("demo").innerHTML = person.firstName + ' ' +person.lastName;
 </script>
+<script>
+    const person1 = {};
+    person1.firstName = "John";
+    person1.lastName = "Doe";
+    person1.age = 50;
+    person1.eyeColor = "blue"; 
+    
+    document.getElementById("demo1").innerHTML =
+    person1.firstName + " is " + person1.age + " years old.";
+</script>
+<script>
+    const person2 = new Object();
+    person2.firstName = "John";
+    person2.lastName = "Doe";
+    person2.age = 50;
+    person2.eyeColor = "blue"; 
 
+    document.getElementById("demo2").innerHTML =
+    person2.firstName + " is " + person2.age + " years old.";
+</script>
+<script>
+    const person3={
+        firstName:'sathish',
+        lastName:'mathew',
+        age:26,
+        eyeColor:'red'
+    }
+
+    const x=person3
+    x.age=27
+
+    document.getElementById('demo3').innerHTML=person3.firstName + ' is ' + person3.age + ' years old '
+</script>
 </body>
 </html>

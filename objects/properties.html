@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JavaScript Properties</title>
+    </head>
+<body>
+<h2>JavaScript definition</h2>
+<p id="demo"></p>
+<h2>JavaScript for...in Loop</h2>
+<p id="demo1"></p>
+<h2>Adding New Properties</h2>
+<p id="demo2"></p>
+<h3>Nested Objects</h3>
+<p id="demo3"></p>
+<p id="demo4"></p>
+<h3>Nested Arrays and Objects</h3>
+<p id="demo5"></p>
+<script>
+    const person = {
+      firstname: "John",
+      lastname: "Doe",
+      age: 50,
+      eyecolor: "blue"
+    };
+    
+    document.getElementById("demo").innerHTML = person["firstname"] + " is " + person["age"] + " years old.";
+</script>
+
+<script>
+    const person1 = {
+      fname:"John",
+      lname:"Doe",
+      age:25
+    }; 
+    
+    let txt = "";
+    for (let x in person1) {
+      txt += person1[x] + " ";
+    }
+    
+    document.getElementById("demo1").innerHTML = txt;
+</script> 
+<script>
+    const person2 = {
+        firstname: "John",
+        lastname: "Doe",
+        age: 50,
+        eyecolor: "blue"
+    };
+
+    person2.nationality='indian';
+    document.getElementById('demo2').innerHTML=person2.firstname + ' is ' + person2.nationality +'.';
+</script>
+<script>
+    const myObj = {
+      name: "John",
+      age: 30,
+      cars: {
+      car1: "Ford",
+      car2: "BMW",
+      car3: "Fiat"
+      }
+    }
+    document.getElementById("demo3").innerHTML = myObj.cars.car1;
+    document.getElementById("demo4").innerHTML = myObj["cars"]["car2"];
+</script>
+<script>
+    let x = "";
+    const myObj1 = {
+      name: "John",
+      age: 30,
+      cars: [
+        {name:"Ford", models:["Fiesta", "Focus", "Mustang"]},
+        {name:"BMW", models:["320", "X3", "X5"]},
+        {name:"Fiat", models:["500", "Panda"]}
+      ]
+    }
+    
+    for (let i in myObj1.cars) {
+
+      x += "<h2>" + myObj1.cars[i].name + "</h2>";
+      for (let j in myObj1.cars[i].models) {
+        x += myObj1.cars[i].models[j] + "<br>";
+      }
+
+    }
+    
+    document.getElementById("demo5").innerHTML = x;
+    </script>
+</body>
+</html>
