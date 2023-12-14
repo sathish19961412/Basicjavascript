@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JavaScript methods</title>
+    </head>
+<body>
+<h2>JavaScript definition</h2>
+<p id="demo"></p>
+<p id="demo1"></p>
+<h2>Adding a Method to an Object</h2>
+<p id="demo2"></p>
+<script>
+    // Create an object:
+    const person = {
+      firstName: "John",
+      lastName: "Doe",
+      id: 5566,
+      fullName : function() {
+        return this.firstName + " " + this.lastName;
+      }
+    };
+    // Display data from the object:
+    document.getElementById("demo").innerHTML = person.fullName();
+    document.getElementById("demo1").innerHTML = person.fullName;
+</script>
+<script>
+    const person1 = {
+    firstName: "John",
+    lastName: "Doe",
+    id: 5566,
+    };
+    person1.name = function() {
+        return (this.firstName + " " + this.lastName).toUpperCase();
+    };
+
+document.getElementById("demo2").innerHTML =
+"My father is " + person1.name(); 
+</script>
+</body>
+</html>
