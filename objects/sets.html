@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>JavaScript Iterables</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <h2>JavaScript Sets</h2>
+        <p>Set Methods</p>
+        <p>The new Set() Method</p>
+        <p id="demo"></p>
+        <p>Add Values To Set</p>
+        <p id="demo1"></p>
+        <p>The forEach() Method</p>
+        <p id="demo2"></p>
+        <script>
+            // Create a Set
+            const letters = new Set(["a","b","c"]);
+
+            // Display set.size
+            document.getElementById("demo").innerHTML = letters.size;
+        </script>
+        <script>
+            // Create a Set
+            const letters1 = new Set();
+            
+            // Add Values to the Set
+            letters1.add("a");
+            letters1.add("b");
+            letters1.add("c");
+            
+            // Display set.size
+            document.getElementById("demo1").innerHTML = letters1.size;
+        </script>
+        <script>
+            const letters2=new Set(['a','b','c']);
+            
+            // List all Elements
+            let text = "";
+            letters2.forEach (function(value) {
+                text += value + "<br>";
+            })
+
+            document.getElementById("demo2").innerHTML = text;
+        </script>
+    </body>
+</html>
