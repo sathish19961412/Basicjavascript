@@ -6,6 +6,15 @@
 <body>
 <h2>JavaScript Display</h2>
 <p id="demo"></p>
+<h2>Displaying Object Properties</h2>
+<p id="demo1"></p>
+<h2>Displaying the Object in a Loop</h2>
+<p id="demo2"></p>
+<h2>Using Object.values()</h2>
+<p id="demo3"></p>
+<h2>Using JSON.stringify()</h2>
+<p id="demo4"></p>
+
 <script>
     // Create an object:
     const person = {
@@ -17,8 +26,56 @@
       }
     };
     // Display data from the object:
-    document.getElementById("demo").innerHTML = person.fullName();
-    document.getElementById("demo1").innerHTML = person.fullName;
+    document.getElementById("demo").innerHTML = person;
+</script>
+
+<script>
+    //create an object:
+    const person1 = {
+      firstName1: "John",
+      lastName1: "Doe",
+      fullName : function() {
+        return this.firstName1 + " " + this.lastName1;
+      }
+    };
+    // Display data from the object:
+    document.getElementById("demo1").innerHTML = person1.firstName1;
+</script>
+
+<script>
+   const person2={
+    name:'sathish',
+    age:27,
+    city:'coimbatore'
+   };
+
+   let txt='';
+
+   for(let x in person2){
+    txt+=person2[x]+ "<br>";
+   };
+
+   document.getElementById('demo2').innerHTML=txt;
+</script>
+
+<script>
+    const person3={
+      name:'sathish',
+      age:27,
+      city:'coimbatore'
+    };
+
+    document.getElementById('demo3').innerHTML=Object.values(person3);
+</script>
+
+<script>
+    const person4={
+      name1:'sathish',
+      age1:27,
+      city1:'coimbatore'
+    };
+
+    document.getElementById('demo4').innerHTML=JSON.stringify(person4);
 </script>
 </body>
 </html>
