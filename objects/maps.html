@@ -9,8 +9,19 @@
         <link rel="stylesheet" href="">
     </head>
     <body>
+
         <h2>JavaScript Maps</h2>
         <p id="demo"></p>
+
+        <h2>Map.set()</h2>
+        <p id="demo1"></p>
+
+        <p>Maps are Objects</p>
+        <p id="demo2"></p>
+
+        <p>Map.forEach()</p>
+        <p id="demo3"></p>
+
         <script>
             // Create a Map
             const fruits = new Map([
@@ -21,5 +32,37 @@
             
             document.getElementById("demo").innerHTML = fruits.get("apples");
         </script>
+        <script>
+            //create a Map
+            const fruits1=new Map();
+
+            //Maps Set() Methods
+            fruits1.set('apples',500);
+            fruits1.set('bananas',600);
+            fruits1.set('oranges',700);
+
+            //Delete() Method
+            fruits1.delete('apples');
+
+            //Display Method
+            document.getElementById('demo1').innerHTML=fruits1.get('bananas')+'<br>'+fruits1.size+'<br>'+fruits1.has("bananas");
+            document.getElementById("demo2").innerHTML = typeof fruits1;
+        </script>
+        <script>
+            // Create a Map
+            const fruits2 = new Map([
+              ["apples", 500],
+              ["bananas", 300],
+              ["oranges", 200]
+            ]);
+            
+            let text = "";
+            fruits2.forEach (function(value, key) {
+              text += key + ' = ' + value + "<br>"
+            })
+            
+            document.getElementById("demo3").innerHTML = text;
+        </script>
+            
     </body>
 </html>
