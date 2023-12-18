@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Function Definitions</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+
+       <h2>Function Declarations</h2>
+       <p id="demo"></p>
+
+       <h2>Function Expressions</h2>
+       <p id="demo1"></p>
+
+       <h2>The Function() Constructor</h2>
+       <p id="demo2"></p>
+
+       <h2>Self-Invoking Functions</h2>
+       <p>Functions can be invoked automatically without being called:</p>
+       <p id="demo3"></p>
+
+       <h2>Arrow Functions</h2>
+       <p id="demo4"></p>
+
+       <script>
+            let x=myfunction(4,12);
+            document.getElementById('demo').innerHTML=x;
+
+            function myfunction(a,b)
+            {
+                return a*b;
+            }
+       </script>
+
+       <script>
+            const x1=function(a,b) { return a*b }
+            document.getElementById('demo1').innerHTML=x1(3,6);
+       </script>
+
+       <script>
+            const myFunction = new Function("a", "b", "return a * b");
+            document.getElementById("demo2").innerHTML = myFunction(4, 3);
+       </script>
+
+       <script>
+            (function(){
+                document.getElementById("demo3").innerHTML ='Hello I called myself';
+            })();
+       </script>
+
+       <script>
+            const x2=(x1,y1)=> {return x1*y1 };
+            document.getElementById('demo4').innerHTML=x2(6,3);
+       </script>
+    </body>
+</html>
