@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>JavaScript Function call()</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+
+       <h2>JavaScript Function call()</h2>
+       <p>All Functions are Methods</p>
+       <p id="demo"></p>
+       <p>The call() Method with Arguments</p>
+       <p id="demo1"></p>
+        <script>
+           const person={
+             fullName:function(){
+                return this.firstname + ' ' + this.lastname;
+             }
+           }
+
+           const person1={
+                firstname:'sathish',
+                lastname:'mathew'
+           }
+
+           const person2={
+                firstname:'mathew',
+                lastname:'sathish'
+           }
+           document.getElementById('demo').innerHTML=person.fullName.call(person1);
+        </script>
+        <script>
+            const person3={
+              fullName:function(city,country){
+                 return this.firstname + ' ' + this.lastname + ' ' + city + country;
+              }
+            }
+ 
+            const person4={
+                 firstname:'sathish',
+                 lastname:'mathew'
+            }
+ 
+            const person5={
+                 firstname:'mathew',
+                 lastname:'sathish'
+            }
+            document.getElementById('demo1').innerHTML=person3.fullName.call(person4,'coimbatore','Tamilnadu');
+         </script>
+    </body>
+</html>
