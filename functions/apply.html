@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>JavaScript Function apply()</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+
+       <h2>JavaScript Function apply()</h2>
+       <p>All Functions are Methods</p>
+       <p id="demo"></p>
+        <script>
+           const person={
+             fullName:function(city,country){
+                return this.firstname + ' ' + this.lastname+ ' ' + city + country;
+             }
+           }
+
+           const person1={
+                firstname:'sathish',
+                lastname:'mathew'
+           }
+
+           const person2={
+                firstname:'mathew',
+                lastname:'sathish'
+           }
+           document.getElementById('demo').innerHTML=person.fullName.apply(person1,[ 'coimbatore' , 'tamilnadu']);
+        </script>
+    </body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>JavaScript Function bind()</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+
+       <h2>JavaScript Function bind()</h2>
+       <p>All Functions are Methods</p>
+       <p id="demo"></p>
+        
+<script>
+    const person = {
+      firstName:"John",
+      lastName: "Doe",
+      fullName: function() {
+        return this.firstName + " " + this.lastName;
+      }
+    }
+    
+    const member = {
+      firstName:"Hege",
+      lastName: "Nilsen",
+    }
+    
+    let fullName = person.fullName.bind(member);
+    
+    document.getElementById("demo").innerHTML = fullName();
+    </script>
+    </body>
+</html>
