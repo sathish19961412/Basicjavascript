@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>JavaScript Function Invocation</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+
+       <h2>JavaScript Function Invocation</h2>
+       <p>Invoking a Function as a Function</p>
+       <p id="demo"></p>
+        <h2>The Global Object</h2>
+        <p id="demo1"></p>
+        <h2>Invoking a Function as a Method</h2>
+        <p id="demo2"></p>
+        <h2>Invoking a Function with a Function Constructor</h2>
+        <p id="demo3"></p>
+        <script>
+
+            function myfuncion(a,b)
+            {
+                 return a*b;
+            }
+            document.getElementById('demo').innerHTML=myfuncion(3,7);
+        </script>
+        <script>
+            let x=myfuncion1();
+            function myfuncion1()
+            {
+                return this;
+            }
+            document.getElementById('demo1').innerHTML=x;
+        </script>
+        <script>
+            const Person={
+                firstname:'sathish',
+                lastname:"mathew",
+                age:27,
+                eyecolor:'red',
+                fullName:function()
+                {
+                    return this.firstname+ " " +this.lastname;
+                }
+            }
+            document.getElementById('demo2').innerHTML=Person.fullName();
+        </script>
+        <script>
+            // This is a function constructor:
+            function myFunction3(arg1, arg2) {
+                this.firstName1 = arg1;
+                this.lastName1  = arg2;
+            }
+
+            // This creates a new object
+            const myObj = new myFunction3("John", "Doe");            
+
+            document.getElementById('demo3').innerHTML=myObj.firstName1;
+        </script>
+    </body>
+</html>

@@ -3,17 +3,44 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Function Parameters</title>
+        <title>JavaScript Function Parameters</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
     <body>
 
-       <h2>Function Declarations</h2>
+       <h2>JavaScript Function Parameters</h2>
        <p id="demo"></p>
-       
+       <h2>Default Parameter Values</h2>
+       <p id="demo1"></p>
+       <h2>Function Rest Parameter</h2>
+       <p id="demo2"></p>
        <script>
-            const x2=(x1,y1)=> {return x1*y1 };
-            document.getElementById('demo4').innerHTML=x2(6,3);
+           function myfuncion(x,y){
+                if(y===undefined)
+                {
+                    y=2;
+                }
+            return x*y;
+           }
+           document.getElementById('demo').innerHTML=myfuncion(6);
+       </script>
+       <script>
+            function myfuncion1(a,y=10)
+            {
+                return a+y;
+            }
+            document.getElementById('demo1').innerHTML=myfuncion1(6)
+       </script>
+       <script>
+         function sum(...args)
+         {
+            let sum=0;
+            for (let arg of args) sum+=arg;
+            return sum;
+         }
+
+         let x=sum(5,10,15,20,25,30);
+         document.getElementById('demo2').innerHTML=x;
        </script>
     </body>
 </html>
