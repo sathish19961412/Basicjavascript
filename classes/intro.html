@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Javascript Class intro</title>
+    </head>
+    <body>
+        <h1>JavaScript Classes</h1>
+        <h3>Creating two car objects from a car class:</h3>
+        <p id="demo"></p>
+        <h3>Class Methods</h3>
+        <p id="demo1"></p>
+        <h3>You can send parameters to Class methods:</h3>
+        <p id="demo2"></p>
+        <script>
+           class Car{
+             constructor(name,year){
+                this.name=name;
+                this.year=year;
+             }
+           }
+           const myCar1=new Car('Volvo',2012);
+           const myCar2=new Car('BMW',2012);
+
+           document.getElementById('demo').innerHTML= myCar1.name + " " +myCar2.name;
+        </script>
+        <script>
+            class Car1{
+                constructor(name1,year1){
+                    this.name1=name1;
+                    this.year1=year1;
+                }
+
+                age(){
+                    const date=new Date();
+                    return date.getFullYear()-this.year1
+                }
+            }
+
+            const myCar3=new Car1('Ford',2018);
+            document.getElementById('demo1').innerHTML="My car is " + myCar3.age() + "year old";
+        </script>
+        <script>
+            class Car2 {
+              constructor(name2, year2) {
+                this.name2= name2;
+                this.year2 = year2;
+              }
+              age(x) {
+                return x - this.year2;
+              }
+            }
+            
+            const date = new Date();
+            let year2 = date.getFullYear();
+            
+            const myCar = new Car2("Ford", 2014);
+            document.getElementById("demo2").innerHTML=
+            "My car is " + myCar.age(year2) + " years old.";
+            </script>
+    </body>
+</html>
