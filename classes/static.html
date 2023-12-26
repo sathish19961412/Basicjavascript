@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>JavaScript Class Static Methods</h1>
+<p>A static method is created with the "static" keyword, and you can only call the method on the class itself.</p>
+
+<p id="demo"></p>
+<p>To use the "myCar" object inside the static method, you can send it as parameter.</p>
+<p id="demo1"></p>
+<script>
+class Car {
+  constructor(name) {
+    this.name = name;
+  }
+  static hello() {
+    return "Hello!!";
+  }
+}
+
+const myCar = new Car("Ford");
+
+//You can call 'hello()' on the Car Class:
+document.getElementById("demo").innerHTML = Car.hello();
+
+// But NOT on  a Car Object:
+// document.getElementById("demo").innerHTML = myCar.hello();
+// this will raise an error.
+</script>
+<script>
+    class Car1 {
+      constructor(name1) {
+        this.name1 = name1;
+      }
+      static hello(x) {
+        return "Hello " + x.name1;
+      }
+    }
+    
+    const myCar1 = new Car1("Ford");
+    document.getElementById("demo1").innerHTML = Car1.hello(myCar1);
+    </script>
+</body>
+</html>
