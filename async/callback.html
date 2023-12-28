@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Js Async - callback</title>
+    </head>
+    <body>
+       <h1>JavaScript Callbacks</h1>
+       <h3>Function Sequence</h3>
+       <p id="demo"></p>
+       <h3>Sequence Control</h3>
+       <p id="demo1"></p>
+       <h3>JavaScript Callbacks</h3>
+       <p id="demo2"></p>
+       <p id="demo3"></p>
+       <script>
+            function display(some){
+                document.getElementById('demo').innerHTML=some;
+            }
+            function first(){
+                display('Hello');
+            }
+            function second(){
+                display('Good Bye');
+            }
+            second();
+            first();
+       </script>
+      <script>
+        function myDisplayer(some) {
+          document.getElementById("demo1").innerHTML = some;
+        }
+        
+        function myCalculator(num1, num2) {
+          let sum = num1 + num2;
+          return sum;
+        }
+        
+        let result = myCalculator(5, 5);
+        myDisplayer(result);
+        </script>
+
+        <script>
+
+            function myDisplayer1(somes){
+                document.getElementById('demo2').innerHTML=somes;
+            }
+
+            function myCalculator1(num3,num4,myCallback)
+            {
+                let sum1 = num4 + num3;
+                myCallback(sum1);
+            }
+            myCalculator1(5,8,myDisplayer1);
+        </script>
+        <script>
+            // Create an Array
+            const myNumbers = [4, 1, -20, -7, 5, 9, -6];
+            
+            // Call removeNeg with a Callback
+            const posNumbers = removeNeg(myNumbers, (x) => x >= 0);
+            
+            // Display Result
+            document.getElementById("demo3").innerHTML = posNumbers;
+            
+            // Remove negative numbers
+            function removeNeg(numbers, callback) {
+              const myArray = [];
+              for (const x of numbers) {
+                if (callback(x)) {
+                  myArray.push(x);
+                }
+              }
+              return myArray;
+            }
+            </script>
+    </body>
+</html>
