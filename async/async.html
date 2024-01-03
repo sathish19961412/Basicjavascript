@@ -10,6 +10,12 @@
     <body>
        <h1>Asynchronous JavaScript</h1>
        <p id="demo"></p>
+       <h1>Asynchronous waiting for Timeout</h1>
+       <p id="demo1"></p>
+       <h1>Function Is Passing To Argument </h1>
+       <p id="demo2"></p>
+       <h1>Waiting for Intervals</h1>
+       <p id="demo3"></p>
        <script>
             function display(some){
                 document.getElementById('demo').innerHTML=some;
@@ -22,6 +28,30 @@
             }
             second();
             first();
+       </script>
+       <script>
+           setTimeout(myfunction,3000)
+
+           function myfunction(){
+              document.getElementById('demo1').innerHTML="Welcome to sathish.Increase your focus mind";
+           }
+       </script>
+       <script>
+           setTimeout(function(){ myFunction('Hi,This the sathish');},3000)
+
+           function myFunction(value)
+           {
+            document.getElementById('demo2').innerHTML=value;
+           }
+       </script>
+       <script>
+          setInterval(intervals,1000)
+
+          function intervals(){
+             let d=new Date();
+
+             document.getElementById('demo3').innerHTML=d.getHours()+':'+d.getMinutes()+':'+':'+d.getSeconds();
+          }
        </script>
     </body>
 </html>
