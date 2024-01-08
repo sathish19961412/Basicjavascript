@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>JavaScript HTML DOM Elements</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <h2>Finding HTML Element by Id</h2>
+        <p id="intro">Finding HTML Elements by Id</p>
+        <p>This example demonstrates the <b>getElementsById</b> method.</p>
+        <p id="demo"></p>
+        <p>Finding HTML Elements by Tag Name.</p>
+        <p id="demo1"></p>
+        <p class="intro">Finding HTML Elements by Class Name</p>
+        <p id="demo2"></p>
+        <script>
+          const element=document.getElementById("intro");
+          document.getElementById("demo").innerHTML="The text from the intro paragraph is:"+element.innerHTML;
+        </script>
+        <script>
+            const element1=document.getElementsByTagName("p");
+            document.getElementById('demo1').innerHTML='The text in first paragraph (index 0) is: ' + element1[1].innerHTML;
+        </script>
+        <script>
+            const x = document.getElementsByClassName("intro");
+            document.getElementById("demo2").innerHTML ='The first paragraph (index 0) with class="intro" is: ' + x[0].innerHTML;
+        </script>
+    </body>
+</html>
