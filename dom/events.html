@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>JavaScript Events</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body onload="checkCookies()">
+        <h2>Reacting to Events</h2>
+        <h1>JavaScript HTML Events</h1>
+        <h2>The onclick Attribute</h2>
+        <h2 onclick="this.innerHTML='Ooops!'">Click on this text!</h2>
+        <h1 onclick="changeText(this)">Click on this text!</h1>
+        <p id="demo"></p>
+        <button onclick="displayDate()">Click Show Date</button>
+        <h1>JavaScript HTML Events</h1>
+        <h2>The onload Attribute</h2>
+        <p id="demo1"></p>
+        <h2>The onmouseover and onmouseout Events</h2>
+        <h2>The onmouseover Attribute</h2>
+        <div onmouseover="mOver(this)" onmouseout="mOut(this)" 
+        style="background-color:#D94A38;width:120px;height:20px;padding:40px;">
+        Mouse Over Me</div>
+        <h2>The onmousedown Attribute</h2>
+        <div onmousedown="mDown(this)" onmouseup="mUp(this)"
+        style="background-color:#D94A38;width:90px;height:20px;padding:40px;">
+        Click Me</div>
+        <script>
+            function changeText(id)
+            {
+                id.innerHTML="sathish";
+            }
+        </script>
+        <script>
+            function displayDate(){
+                document.getElementById('demo').innerHTML=Date();
+            }
+        </script>
+        <script>
+            function checkCookies() {
+              let text = "";
+              if (navigator.cookieEnabled == false) {
+                text = "Cookies are enabled.";
+              } else {
+                text = "Cookies are not enabled.";
+              }
+              document.getElementById("demo1").innerHTML = text;
+            }
+        </script>
+        <script>
+            function mOver(obj) {
+              obj.innerHTML = "Thank You"
+            }
+            
+            function mOut(obj) {
+              obj.style.color="#fff";
+              obj.innerHTML = "Mouse Over Me"
+            }
+        </script>
+        <script>
+            function mDown(obj) {
+              obj.style.backgroundColor = "#1ec5e5";
+              obj.innerHTML = "Release Me";
+            }
+            
+            function mUp(obj) {
+              obj.style.backgroundColor="green";
+              obj.innerHTML="Thank You";
+            }
+        </script>
+    </body>
+</html>
