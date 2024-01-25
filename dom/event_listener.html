@@ -22,9 +22,35 @@
     </style>
     <body>
         <h2>The addEventListener() method</h2>
-        
+        <button id="myBtn">Try it</button>
+        <p id="demo"></p>
+        <button id="myBtn1">Click</button>
+         <h2>Add Many Event Handlers to the Same Element</h2>
+         <button id="myBtn2">Try it</button>
         <script>
-            
+          document.getElementById("myBtn").addEventListener("click", displayDate);
+
+          function displayDate() {
+            document.getElementById("demo").innerHTML =Date();
+          }
+        </script>
+        <script>
+          document.getElementById('myBtn1').addEventListener("click",function(){
+              alert("Welcome to back");
+          });
+        </script>
+        <script>
+          var x = document.getElementById("myBtn2");
+          x.addEventListener("click", myFunction);
+          x.addEventListener("click", someOtherFunction);
+
+          function myFunction() {
+            alert ("Hello World!");
+          }
+
+          function someOtherFunction() {
+            alert ("This function was also executed!");
+          }
         </script>
     </body>
 </html>
