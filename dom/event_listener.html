@@ -25,8 +25,11 @@
         <button id="myBtn">Try it</button>
         <p id="demo"></p>
         <button id="myBtn1">Click</button>
-         <h2>Add Many Event Handlers to the Same Element</h2>
-         <button id="myBtn2">Try it</button>
+        <h2>Add Many Event Handlers to the Same Element</h2>
+        <button id="myBtn2">Try it</button>
+        <h2>You can add events of different types to the same element:</h2>
+        <button id="myBtn3">Try it</button>
+        <p id="demo3"></p>
         <script>
           document.getElementById("myBtn").addEventListener("click", displayDate);
 
@@ -51,6 +54,24 @@
           function someOtherFunction() {
             alert ("This function was also executed!");
           }
+        </script>
+       <script>
+            var x = document.getElementById("myBtn3");
+            x.addEventListener("mouseover", myFunction);
+            x.addEventListener("click", mySecondFunction);
+            x.addEventListener("mouseout", myThirdFunction);
+
+            function myFunction() {
+              document.getElementById("demo3").innerHTML += "Moused over!<br>";
+            }
+
+            function mySecondFunction() {
+              document.getElementById("demo3").innerHTML += "Clicked!<br>";
+            }
+
+            function myThirdFunction() {
+              document.getElementById("demo3").innerHTML += "Moused out!<br>";
+            }
         </script>
     </body>
 </html>
