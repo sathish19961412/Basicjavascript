@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Javascript Window</title>
+    </head>
+    <body>
+        <h4>The Browser Object Model (BOM)</h4>
+        <p>
+            window.open() - open a new window<br>
+            window.close() - close the current window<br>
+            window.moveTo() - move the current window<br>
+            window.resizeTo() - resize the current window<br>
+        </p>
+        <p id="demo"></p>
+        <script>
+            document.getElementById("demo").innerHTML="Brower inner Window Width:" + window.innerWidth + "px<br>" + "Brower inner Window:" + window.innerHeight + "px"+window.open();
+        </script>
+    </body>
+</html>
