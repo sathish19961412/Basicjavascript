@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Window Navigator</title>
+    </head>
+    <body>
+        <h3>JavaScript Window Navigator</h3>
+        <p>
+            navigator.cookieEnabled<br>
+            navigator.appCodeName<br>
+            navigator.platform
+        </p>
+        <p id="demo"></p>
+        <h3>Navigator AppName</h3>
+        <p id="demo1"></p>
+        <h3>Navigator AppCodeName</h3>
+        <p id="demo2"></p>
+        <h3>The Browser Engine</h3>
+        <p id="demo3"></p>
+        <h3>The Browser Version</h3>
+        <p id="demo4"></p>
+        <script>
+            document.getElementById("demo").innerHTML =
+            "cookiesEnabled is " + navigator.cookieEnabled;
+        </script>
+        <script>
+            document.getElementById("demo1").innerHTML = "navigator.appName is " + navigator.appName;
+        </script>
+        <script>
+            document.getElementById("demo2").innerHTML =
+            "navigator.appCodeName is " + navigator.appCodeName;
+        </script>
+        <script>
+            document.getElementById("demo3").innerHTML =
+            "navigator.product is " + navigator.product;
+        </script>
+        <script>
+            document.getElementById("demo4").innerHTML = navigator.appVersion;
+        </script>
+    </body>
+</html>
