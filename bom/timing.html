@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>JavaScript Timing</title>
+    </head>
+    <body>
+        <h3>JavaScript Timing Events</h3>
+        <h3>The setTimeout() Method</h3>
+       
+        <button onclick="setTimeout(myFunction, 3000);">Try it</button>
+        <h3>How to Stop the Execution?</h3>
+        <button onclick="myVar = setTimeout(myFunction1, 3000)">Try it</button>
+        <button onclick="clearTimeout(myVar)">Stop it</button>
+        <h3>How to Stop the Execution?</h3>
+        <p id="demo"></p>
+        <button onclick="clearInterval(myVar1)">Stop time</button>
+        <p id="demo1"></p>
+
+        <script>
+            function myFunction() {
+            alert('Hello');
+            }
+        </script>
+        <script>
+            function myFunction1() {
+            alert("Hello");
+            }
+        </script>
+        <script>
+            setInterval(myTimer, 1000);
+            function myTimer() {
+              const d = new Date();
+              document.getElementById("demo").innerHTML = d.toLocaleTimeString();
+            }
+        </script>
+        <script>
+            let myVar1 = setInterval(myTimer, 1000);
+            function myTimer() {
+              const d = new Date();
+              document.getElementById("demo1").innerHTML = d.toLocaleTimeString();
+            }
+        </script>
+    </body>
+</html>
