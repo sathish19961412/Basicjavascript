@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Web History Api</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <h3>Web History back method</h3>
+        <button onclick="myFunction()">Go Back</button>
+        <h3>The History go() Method</h3>
+        <button onclick="myFunction1()">Go Back 2 Pages</button>
+
+
+        <script>
+            function myFunction() {
+            window.history.back();
+            }
+        </script><script>
+            function myFunction1() {
+            window.history.go(-2);
+            }
+        </script>
+    </body>
+</html>
