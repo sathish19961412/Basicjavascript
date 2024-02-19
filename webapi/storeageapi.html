@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>javascript storeageapi</title>
+    </head>
+    <body>
+        <h3>Web Storage API</h3>
+        <p>The Web Storage API is a simple syntax for storing and retrieving data in the browser. It is very easy to use:</p>
+        <p id="demo"></p>
+        <h3>Session Storage</h3>
+        <p id="demo1"></p>
+        <script>
+            localStorage.setItem("name","John Doe");
+            document.getElementById("demo").innerHTML = localStorage.getItem("name");
+        </script>
+        <script>
+            sessionStorage.setItem("name","John Doe");
+            document.getElementById("demo1").innerHTML = sessionStorage.getItem("name");
+        </script>
+    </body>
+</html>
