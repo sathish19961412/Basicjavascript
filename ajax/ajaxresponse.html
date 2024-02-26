@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>AJAX - Server Response</title>
+    </head>
+    <body>
+        <p>
+            Server Response Properties <br>
+            responseText-get the response data as a string<br>
+            responseXML-get the response data as XML data<br>
+        </p>
+        <div id="demo">
+            <h2>The XMLHttpRequest Object</h2>
+            <button type="button" onclick="loadDoc()">Change Content</button>
+        </div>
+                
+        <h2>The XMLHttpRequest Object</h2>
+        <p id="demo1"></p>
+ 
+        <script>
+            function loadDoc() {
+              const xhttp = new XMLHttpRequest();
+              xhttp.onload = function() {
+                document.getElementById("demo").innerHTML =
+                this.responseText;
+              }
+              xhttp.open("GET", "ajax_info.txt");
+              xhttp.send();
+            }
+        </script>
+
+
+        <script>
+            const xhttp = new XMLHttpRequest();
+            xhttp.onload = function() {
+            const xmlDoc = this.responseXML;
+            const x = xmlDoc.getElementsByTagName("ARTIST");
+            let txt = "";
+            for (let i = 0; i < x.length; i++) {
+                txt = txt + x[i].childNodes[0].nodeValue + "<br>";
+            }
+            document.getElementById("demo1").innerHTML = txt;
+            }
+            xhttp.open("GET", "cd_catalog.xml");
+            xhttp.send();
+        </script>
+            
+    </body>
+</html>

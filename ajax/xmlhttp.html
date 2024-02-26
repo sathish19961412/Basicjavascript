@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <title>The XMLHttpRequest Object</title>
+<body>
+
+<h2>The XMLHttpRequest Object</h2>
+
+<div id="demo">
+<p>Let AJAX change this text.</p>
+<button type="button" onclick="loadDoc()">Change Content</button>
+</div>
+
+<div id="demo1">
+    <p>Let AJAX change this text.</p>
+    <button type="button" onclick="loadDoc1()">Change Content</button>
+</div>
+    
+<script>
+function loadDoc() {
+  const xhttp = new XMLHttpRequest();
+  xhttp.onload = function() {
+    document.getElementById("demo").innerHTML = this.responseText;
+  }
+  xhttp.open("GET", "ajax_info.txt");
+  xhttp.send();
+}
+</script>
+
+<script>
+    function loadDoc1() {
+      const xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+          document.getElementById("demo1").innerHTML =this.responseText;
+        }
+      };
+      xhttp.open("GET","ajax_info.txt");
+      xhttp.send();
+    }
+    </script>
+</body>
+</html>

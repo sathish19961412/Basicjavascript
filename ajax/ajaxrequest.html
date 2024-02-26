@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>The XMLHttpRequest Object</h2>
+<button type="button" onclick="loadDoc()">Request data</button>
+<p id="demo"></p>
+
+<h2>The XMLHttpRequest Object</h2>
+<button type="button" onclick="loadDoc1()">Request data</button>
+<p id="demo1"></p>
+
+<script>
+function loadDoc() {
+  const xhttp = new XMLHttpRequest();
+  xhttp.onload = function() {
+    document.getElementById("demo").innerHTML = this.responseText;
+  }
+  xhttp.open("GET","demo_get2.asp?fname=Henry&lname=Ford");
+  xhttp.send();
+}
+</script>
+<script>
+    function loadDoc1() {
+      const xhttp = new XMLHttpRequest();
+      xhttp.onload = function() {
+        document.getElementById("demo1").innerHTML = this.responseText;
+      }
+      xhttp.open("POST", "demo_post2.asp");
+      xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+      xhttp.send("fname=Henry&lname=Ford");
+    }
+</script>
+    
+</body>
+</html>
