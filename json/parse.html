@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Creating an Object from a JSON String</h2>
+<p id="demo"></p>
+
+<h2>Creating an Array from a JSON String</h2>
+<p id="demo1"></p>
+
+<h2>Convert a string into a date object.</h2>
+<p id="demo2"></p>
+
+<script>
+const txt = '{"name":"John", "age":30, "city":"New York"}'
+const obj = JSON.parse(txt);
+document.getElementById("demo").innerHTML = obj.name + ", " + obj.age;
+</script>
+<script>
+    const text = '[ "Ford", "BMW", "Audi", "Fiat" ]';
+    const myArr = JSON.parse(text);
+    document.getElementById("demo1").innerHTML = myArr[0];
+</script>
+<script>
+    const text1 = '{"name":"John", "birth":"1986-12-14", "city":"New York"}';
+    const obj1 = JSON.parse(text1);
+    obj1.birth = new Date(obj1.birth);
+    document.getElementById("demo2").innerHTML = obj1.name + ", " + obj1.birth; 
+</script>
+</body>
+</html>
