@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>json stringify</title>
+    </head>
+    <body>
+        <h2>Create a JSON string from a JavaScript object.</h2>
+        <p id="demo"></p>
+
+        <h2>Create a JSON string from a JavaScript array.</h2>
+        <p id="demo1"></p>
+
+        <script>
+            const obj = {
+                name: "John", 
+                age: 30, 
+                city: "New York"
+            };
+            const myJSON = JSON.stringify(obj);
+            document.getElementById("demo").innerHTML = myJSON;
+        </script>
+
+        <script>
+            const obj1 =["John", "Peter", "Sally", "Jane"];
+            const myJSON1 = JSON.stringify(obj1);
+            document.getElementById("demo1").innerHTML = myJSON1;
+        </script>
+    </body>
+</html>
