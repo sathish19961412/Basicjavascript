@@ -1,0 +1,38 @@
+<!DOCTYPE <!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>javascript array</title>
+    </head>
+    <body>
+         <h2>Creating an array from a Literal</h2>
+         <p id="demo"></p>
+         <h2>Create JSON Parse in Array</h2>
+         <p id="demo1"></p>
+         <h2>Looping an array</h2>
+         <p id="demo2"></p>
+         <script>
+            const myArray=['Ford','BMW','Fiat'];
+            document.getElementById('demo').innerHTML=myArray;
+         </script>
+        <script>
+            const myJSON = '["Ford", "BMW", "Fiat"]';
+            const myArray1 = JSON.parse(myJSON);
+            document.getElementById("demo1").innerHTML = myArray1[0];
+        </script>
+        <script>
+                const myJSON1 = '{"name":"John", "age":30, "cars":["Ford", "BMW", "Fiat"]}';
+                const myObj2 = JSON.parse(myJSON1);
+                
+                let text1 = "";
+                for (let i in myObj2.cars) {
+                  text1 += myObj2.cars[i] + "<br>";
+                }
+                
+                document.getElementById("demo2").innerHTML = text1;
+        </script>
+    </body>
+</html>

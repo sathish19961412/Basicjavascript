@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>js objects</title>
+    </head>
+    <body>
+        <h2>Creating an Object from a JSON Literal</h2>
+        <p id="demo"></p>
+        <h2>Normally, you create a JavaScript object by parsing a JSON string</h2>
+        <p id="demo1"></p>
+        <script>
+            const myObj = {
+                "name":"John", 
+                "age":30, 
+                "car":null
+            };
+            document.getElementById("demo").innerHTML = myObj.name +'<br>'+ myObj.age +'<br>'+myObj.car;
+        </script>
+        <script>
+            const myJSON ='{"name":"sathish","age":27,"car":null}';
+            const myObj1=JSON.parse(myJSON);
+
+            let text = "";
+
+            for (const x in myObj) {
+                text += x + ", ";
+            }
+
+            document.getElementById("demo1").innerHTML=text;
+        </script>
+    </body>
+</html>
