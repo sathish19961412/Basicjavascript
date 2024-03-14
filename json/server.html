@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>javascript server</title>
+    </head>
+    <body>
+        <h2>Convert a JSON string into a JavaScript object.</h2>
+        <p id="demo"></p>
+        <h2>Fetch a JSON file with XMLHttpRequest</h2>
+        <p id="demo1"></p>
+        <h2>Fetch a JSON file with XMLHttpRequest</h2>
+        <p>Content written as an JSON array will be converted into a JavaScript array.</p>
+        <p id="demo2"></p>
+        <script>
+            const myJSON = '{"name":"John", "age":31, "city":"New York"}';
+            const mystring=JSON.parse(myJSON);
+            document.getElementById("demo").innerHTML = mystring.name;
+        </script>
+        <script>
+            const xmlhttp = new XMLHttpRequest();
+            xmlhttp.onload = function() {
+              const myObj = JSON.parse(this.responseText);
+              document.getElementById("demo1").innerHTML = myObj.name+'<br>'+myObj.age;
+            }
+            xmlhttp.open("GET", "json_demo.txt");
+            xmlhttp.send();
+        </script>
+       <script>
+            const xmlhttp1 = new XMLHttpRequest();
+            xmlhttp1.onload = function() {
+                const myArr = JSON.parse(this.responseText);
+                document.getElementById("demo2").innerHTML = myArr[0];
+            }
+            xmlhttp1.open("GET", "json_demo_array.txt", true);
+            xmlhttp1.send();
+        </script>
+    </body>
+</html>

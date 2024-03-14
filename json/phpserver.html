@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Get JSON Data from a PHP Server</h2>
+<p id="demo"></p>
+
+<script>
+    const xmlhttp = new XMLHttpRequest();
+
+    xmlhttp.onload = function() {
+        const myObj = JSON.parse(this.responseText);
+        document.getElementById("demo").innerHTML = myObj.name;
+    }
+    xmlhttp.open("GET", "basicphp.php");
+    xmlhttp.send();
+</script>
+
+</body>
+</html>
